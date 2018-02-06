@@ -1,8 +1,4 @@
-.loader {
-  background-color: pink;
-  height: 100vh; }
-  .loader .loader__p {
-    text-align: center;
-    font-weight: italic; }
+.endScreen p {
+  text-size: 27px; }
 
 /*# sourceMappingURL=styleGabriel.css.map */
