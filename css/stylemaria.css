@@ -1,8 +1,4 @@
-.loader {
-  background-color: pink;
-  height: 100vh; }
-  .loader .loader__p {
-    text-align: right;
-    font-weight: bold; }
+.header__h1 {
+  font-weight: bold; }
 
 /*# sourceMappingURL=stylemaria.css.map */
