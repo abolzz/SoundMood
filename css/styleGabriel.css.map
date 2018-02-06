@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACC,YAAE;EACD,SAAS,EAAE,IAAI",
+"mappings": "AACC,YAAE;EACK,SAAS,EAAE,IAAI",
 "sources": ["styleGabriel.scss"],
 "names": [],
 "file": "styleGabriel.css"
