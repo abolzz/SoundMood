@@ -1,4 +1,14 @@
 @font-face {
 	font-family: Quantum;
-	src: url(../fonts/Quantum/QuarcaExtRegular.otf);
+	src: url(../fonts/Quantum.otf);
+}
+@font-face {
+	font-family: Occupied;
+	src: url(../fonts/Occupied.otf);
+}
+h1 {
+	font-family: Quantum;
+}
+p {
+	font-family: Occupied;
 }
