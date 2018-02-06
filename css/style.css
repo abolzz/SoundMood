@@ -1,3 +1,7 @@
+body, button {
+	font-family: Occupied, sans-serif;
+	font-size: 28px;
+}
 @font-face {
 	font-family: Quantum;
 	src: url(../fonts/Quantum.otf);
@@ -9,6 +13,7 @@
 h1 {
 	font-family: Quantum;
 }
-p {
-	font-family: Occupied;
+section {
+	width: 100vw;
+	height: 100vh;
 }

@@ -1,0 +1,16 @@
+.endScreen {
+	text-align: center;
+	display: grid;
+	grid-template-columns: 20% auto 20%;
+	grid-template-rows: 30% 20% 30% 20%;
+		.endScreen__p {
+			grid-column-start: 2;
+  			grid-column-end: 2;
+  			align-self: center;
+		}
+		.endScreen__button {
+			background-color: transparent;
+			border: none;
+		}
+		
+}
