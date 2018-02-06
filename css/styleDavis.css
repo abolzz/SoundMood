@@ -1,1 +1,9 @@
-/**/
+/* these are my styles */
+.loader {
+  background-color: pink;
+  height: 100vh; }
+  .loader .loader__p {
+    text-align: center;
+    font-weight: bold; }
+
+/*# sourceMappingURL=styleDavis.css.map */
