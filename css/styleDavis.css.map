@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,yBAAyB;AACzB,OAAQ;EACN,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,KAAK;EACb,kBAAW;IACT,UAAU,EAAE,MAAM;IAClB,WAAW,EAAE,IAAI",
-"sources": ["styleDavis.scss"],
+"mappings": "",
+"sources": [],
 "names": [],
 "file": "styleDavis.css"
 }
