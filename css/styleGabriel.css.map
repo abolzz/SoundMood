@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACC,YAAE;EACK,SAAS,EAAE,IAAI",
+"sources": ["styleGabriel.scss"],
+"names": [],
+"file": "styleGabriel.css"
+}
