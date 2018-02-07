@@ -10,9 +10,7 @@ body, button {
 	font-family: Occupied;
 	src: url(../fonts/Occupied.otf);
 }
-h1 {
-	font-family: Quantum;
-}
+
 section {
 	width: 100vw;
 	height: 100vh;
