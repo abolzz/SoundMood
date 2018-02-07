@@ -1,0 +1,18 @@
+.gallery {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
+  grid-template-rows: repeat(auto-fill, minmax(150px, 250));
+  grid-template-areas: " image image" " image image"; }
+  .gallery .gallery__img {
+    grid-area: image; }
+
+.header {
+  background-color: #000066;
+  color: white;
+  height: 30px;
+  text-align: center;
+  padding-top: 0.5em; }
+
+/*# sourceMappingURL=stylemaria.css.map */
