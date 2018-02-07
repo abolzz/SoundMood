@@ -1,3 +1,7 @@
+body, button {
+	font-family: Occupied, sans-serif;
+	font-size: 28px;
+}
 @font-face {
 	font-family: Quantum;
 	src: url(../fonts/Quantum.otf);
@@ -7,8 +11,11 @@
 	src: url(../fonts/Occupied.otf);
 }
 h1 {
-	font-family: Quantum;
+	font-size: 0.75em;
 }
-p {
-	font-family: Occupied;
+section {
+	width: 100vw;
+	/* the size of header */
+	height: calc(100vh - 30px);
+	background: linear-gradient(to bottom, rgba(255, 0, 77, 0.75), rgba(255, 242, 74, 0.85));
 }
