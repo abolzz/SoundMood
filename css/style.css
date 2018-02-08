@@ -1,21 +1,179 @@
-body, button {
-	font-family: Occupied, sans-serif;
-	font-size: 28px;
-}
+body,
+button {
+  font-family: Occupied, sans-serif;
+  font-size: 28px; }
+
 @font-face {
-	font-family: Quantum;
-	src: url(../fonts/Quantum.otf);
-}
+  font-family: Quantum;
+  src: url("../fonts/Quantum.otf"); }
 @font-face {
-	font-family: Occupied;
-	src: url(../fonts/Occupied.otf);
-}
+  font-family: Occupied;
+  src: url("../fonts/Occupied.otf"); }
 h1 {
-	font-size: 0.75em;
-}
+  font-size: 0.75em; }
+
 section {
-	width: 100vw;
-	/* the size of header */
-	height: calc(100vh - 30px);
-	background: linear-gradient(to bottom, rgba(255, 0, 77, 0.75), rgba(255, 242, 74, 0.85));
-}
+  width: 100vw;
+  /* the size of header */
+  height: calc(100vh - 30px);
+  background: linear-gradient(to bottom, rgba(255, 0, 77, 0.75), rgba(255, 242, 74, 0.85)); }
+
+.header {
+  background-color: #000066;
+  color: white;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .header .header__h1 {
+    align-self: center;
+    text-align: center; }
+
+.gifScreen {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto; }
+  .gifScreen .gifScreen__gif {
+    grid-column-start: 1;
+    align-self: center;
+    justify-self: center; }
+
+.endScreen {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 5% 10% 5% auto 5% 10% 5%;
+  grid-template-rows: 20% 20% 10% 10% 10% 5% auto; }
+  .endScreen .endScreen__h1 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    align-self: end;
+    font-weight: bold;
+    font-size: 1.2em; }
+  .endScreen .endScreen__img {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    align-self: center;
+    justify-self: center; }
+  .endScreen .endScreen__p {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    align-self: center; }
+  .endScreen .endScreen__button {
+    background-color: transparent;
+    border: none;
+    align-self: center;
+    justify-self: center; }
+  .endScreen .endScreen__button--play {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6; }
+  .endScreen .endScreen__p--right {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    text-align: left; }
+  .endScreen .endScreen__p--bold {
+    font-weight: bold; }
+  .endScreen .endScreen__p--end {
+    align-self: end; }
+  .endScreen .endScreen__p--start {
+    align-self: start; }
+  .endScreen .endScreen__p--left {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    text-align: left; }
+  .endScreen .endScreen__button--more {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-self: start;
+    align-self: start; }
+
+/*css rules for loading page start */
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-color: lightblue;
+  background-image: url("../img/pct5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.loader__p.loader__p--bold {
+  font-size: 55px;
+  color: white;
+  font-family: Quantum; }
+
+.loader__p {
+  font-size: 25px;
+  color: white; }
+
+/*end*/
+/*  sceens with instruction */
+.instruction {
+  text-align: center;
+  height: 100vh;
+  font-size: 25px; }
+
+.instruction__p {
+  padding-top: 80%; }
+
+.instruction__button {
+  margin-top: 20%;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px; }
+
+/*end*/
+* {
+  box-sizing: border-box; }
+
+.gallery {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  padding-top: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  overflow: hidden; }
+  .gallery__img {
+    overflow: hidden; }
+    .gallery__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .gallery__timer {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.header {
+  background-color: #000066;
+  color: white;
+  height: 30px;
+  text-align: center;
+  padding-top: 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
