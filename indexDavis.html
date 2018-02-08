@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>SoundMood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mobile application for suggesting song according to your mood">
+    <meta name="author" content="Davis, Gabriel, Maria">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/styleDavis.css">
+	<title></title>
+</head>
+<body>
+
+<!-- header -->
+<header class="header">
+  <h1 class="header__h1">SoundMood</h1>
+</header>
+
+<!-- GIF -->
+<section class="gifScreen">
+	<img src="img/funny-gif.gif" alt="Funny GIF" class="gifScreen__gif">
+	
+</section>
+
+<!--end screen-->
+<section class="endScreen">
+<h1 class="endScreen__h1">You seem to be sad...</h1>
+<img src="img/sad-emotion.png" alt="Sad Face" class="endScreen__img">
+<p class="endScreen__p endScreen__p--end">Try listening to this:</p>
+
+<!-- resulting song -->
+<button class="endScreen__button endScreen__button--play">
+	<img src="img/play-button.svg" alt="Play Button">
+</button>
+<p class="endScreen__p endScreen__p--right endScreen__p--end endScreen__p--bold">Name of the song</p>
+<p class="endScreen__p endScreen__p--right endScreen__p--start">Artist</p>
+
+<!-- other similar songs -->
+<p class="endScreen__p endScreen__p--left">Similar songs:</p>
+<button class="endScreen__button endScreen__button--more">
+	<img src="img/more-button.svg" alt="More Button">
+</button>
+
+</section>
+
+</body>
+</html>

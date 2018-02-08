@@ -7,43 +7,61 @@
     <meta name="description" content="Mobile application for suggesting song according to your mood">
     <meta name="author" content="Davis, Gabriel, Maria">
     <link href="css/reset.css" type="text/css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/styleDavis.css">
-	<title></title>
-</head>
-<body>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--links to css and fonts-->
+ </head>
 
-<!-- header -->
+ <body>
+
 <header class="header">
   <h1 class="header__h1">SoundMood</h1>
 </header>
 
-<!-- GIF -->
-<section class="gifScreen">
-	<img src="img/funny-gif.gif" alt="Funny GIF" class="gifScreen__gif">
-	
+<!--loading screen-->
+<section class="loader">
+<p class="loader__p loader__p--bold">SoundMood</p>
+<p class="loader__p">Let the music take over</p>
+</section>
+
+<!--first screen with instruction-->
+<section class="instruction">
+  <p class="instruction__p">Choose the photo which suits your current mood.</p>
+  <button class="instruction__button">OK</button>
+</section>
+
+
+<section class="gallery">
+<a href=""><img class="gallery__img" src="http://via.placeholder.com/350x150"></a>
+<a href=""><img class="gallery__img" src="http://via.placeholder.com/350x150"></a>
+<a href=""><img class="gallery__img" src="http://via.placeholder.com/350x150"></a>
+<a href=""><img class="gallery__img" src="http://via.placeholder.com/350x150"></a>
+<!--timer-->
+</section>
+
+<!--second screen instruction-->
+<section class="instruction">
+  <p class="instruction__p">explanation of GIF</p>
+  <button class="instruction__button">OK</button>
+</section>
+<!--emoticons-->
+<section class="gallery">
+<a href=""><img class="gallery__img" src="http://via.placeholder.com/350x150"></a>
+<a href=""><img class="gallery__img" src="http://via.placeholder.com/350x150"></a>
+<a href=""><img class="gallery__img" src="http://via.placeholder.com/350x150"></a>
+<a href=""><img class="gallery__img" src="http://via.placeholder.com/350x150"></a>
+<!--timer-->
 </section>
 
 <!--end screen-->
 <section class="endScreen">
-<h1 class="endScreen__h1">You seem to be sad...</h1>
-<img src="img/sad-emotion.png" alt="Sad Face" class="endScreen__img">
-<p class="endScreen__p endScreen__p--end">Try listening to this:</p>
-
-<!-- resulting song -->
-<button class="endScreen__button endScreen__button--play">
-	<img src="img/play-button.svg" alt="Play Button">
-</button>
-<p class="endScreen__p endScreen__p--right endScreen__p--end endScreen__p--bold">Name of the song</p>
-<p class="endScreen__p endScreen__p--right endScreen__p--start">Artist</p>
-
-<!-- other similar songs -->
-<p class="endScreen__p endScreen__p--left">Similar songs:</p>
-<button class="endScreen__button endScreen__button--more">
-	<img src="img/more-button.svg" alt="More Button">
-</button>
-
+<p class="endScreen__p">You seem to be sad..</p>
+<p class="endScreen__p">Try listening to this</p>
+<button class="endScreen__button">Play</button>
+<p class="endScreen__p">Similar songs</p>
+<button class="endScreen__button">Play</button>
 </section>
 
-</body>
+
+<script src="js/script.js" type="text/javascript"></script>
+ </body>
 </html>
