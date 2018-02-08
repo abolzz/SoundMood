@@ -1,179 +1,52 @@
-body,
-button {
-  font-family: Occupied, sans-serif;
-  font-size: 28px; }
+/*
+Error: File to import not found or unreadable: stylemaria.
+       Load path: C:/xampp/htdocs/SoundMood/css
+        on line 28 of C:\xampp\htdocs\SoundMood\css\style.scss
 
-@font-face {
-  font-family: Quantum;
-  src: url("../fonts/Quantum.otf"); }
-@font-face {
-  font-family: Occupied;
-  src: url("../fonts/Occupied.otf"); }
-h1 {
-  font-size: 0.75em; }
+23:   background: linear-gradient(to bottom, rgba(255, 0, 77, 0.75), rgba(255, 242, 74, 0.85));
+24: }
+25: @import '_gifScreen';
+26: @import '_endScreen';
+27: @import 'styleGabriel';
+28: @import 'stylemaria';
 
-section {
-  width: 100vw;
-  /* the size of header */
-  height: calc(100vh - 30px);
-  background: linear-gradient(to bottom, rgba(255, 0, 77, 0.75), rgba(255, 242, 74, 0.85)); }
-
-.header {
-  background-color: #000066;
-  color: white;
-  height: 30px;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-  .header .header__h1 {
-    align-self: center;
-    text-align: center; }
-
-.gifScreen {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto; }
-  .gifScreen .gifScreen__gif {
-    grid-column-start: 1;
-    align-self: center;
-    justify-self: center; }
-
-.endScreen {
-  text-align: center;
-  display: grid;
-  grid-template-columns: 5% 10% 5% auto 5% 10% 5%;
-  grid-template-rows: 20% 20% 10% 10% 10% 5% auto; }
-  .endScreen .endScreen__h1 {
-    grid-column-start: 2;
-    grid-column-end: 7;
-    align-self: end;
-    font-weight: bold;
-    font-size: 1.2em; }
-  .endScreen .endScreen__img {
-    grid-column-start: 2;
-    grid-column-end: 7;
-    align-self: center;
-    justify-self: center; }
-  .endScreen .endScreen__p {
-    grid-column-start: 3;
-    grid-column-end: 6;
-    align-self: center; }
-  .endScreen .endScreen__button {
-    background-color: transparent;
-    border: none;
-    align-self: center;
-    justify-self: center; }
-  .endScreen .endScreen__button--play {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 6; }
-  .endScreen .endScreen__p--right {
-    grid-column-start: 4;
-    grid-column-end: 6;
-    text-align: left; }
-  .endScreen .endScreen__p--bold {
-    font-weight: bold; }
-  .endScreen .endScreen__p--end {
-    align-self: end; }
-  .endScreen .endScreen__p--start {
-    align-self: start; }
-  .endScreen .endScreen__p--left {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    text-align: left; }
-  .endScreen .endScreen__button--more {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    justify-self: start;
-    align-self: start; }
-
-/*css rules for loading page start */
-.loader {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
-  background-color: lightblue;
-  background-image: url("../img/pct5.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.loader__p.loader__p--bold {
-  font-size: 55px;
-  color: white;
-  font-family: Quantum; }
-
-.loader__p {
-  font-size: 25px;
-  color: white; }
-
-/*end*/
-/*  sceens with instruction */
-.instruction {
-  text-align: center;
-  height: 100vh;
-  font-size: 25px; }
-
-.instruction__p {
-  padding-top: 80%; }
-
-.instruction__button {
-  margin-top: 20%;
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px; }
-
-/*end*/
-* {
-  box-sizing: border-box; }
-
-.gallery {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  padding-top: 30px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  overflow: hidden; }
-  .gallery__img {
-    overflow: hidden; }
-    .gallery__img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-  .gallery__timer {
-    background-color: white;
-    width: 100px;
-    height: 100px;
-    margin-top: 15px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-
-.header {
-  background-color: #000066;
-  color: white;
-  height: 30px;
-  text-align: center;
-  padding-top: 0.5em;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+C:\xampp\htdocs\SoundMood\css\style.scss:28
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:45:in `import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: stylemaria.\A        Load path: C:/xampp/htdocs/SoundMood/css\A         on line 28 of C:\xampp\htdocs\SoundMood\css\style.scss\A \A 23:   background: linear-gradient(to bottom, rgba(255, 0, 77, 0.75), rgba(255, 242, 74, 0.85));\A 24: }\A 25: @import '_gifScreen';\A 26: @import '_endScreen';\A 27: @import 'styleGabriel';\A 28: @import 'stylemaria';"; }
