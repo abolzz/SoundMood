@@ -6,31 +6,30 @@
   text-align: center;
   height: 100vh;
   background-color: lightblue;
-  background-image: url("../images/pct5.jpg");
+  background-image: url("../img/pct5.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
-p.loader__p.loader__p--bold {
+.loader__p.loader__p--bold {
   font-size: 55px;
   color: white;
   font-family: Quantum; }
 
-p.loader__p {
+.loader__p {
   font-size: 25px;
   color: white; }
 
 /*end*/
 /*  sceens with instruction */
 .instruction {
-  font-family: Quantum;
   text-align: center;
   height: 100vh;
   font-size: 25px; }
 
-p.instruction__p {
+.instruction__p {
   padding-top: 80%; }
 
-button.instruction__button {
+.instruction__button {
   margin-top: 20%;
   background-color: #4CAF50;
   border: none;
