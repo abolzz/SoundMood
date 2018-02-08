@@ -3,6 +3,7 @@ $header-height: 30px;
 * {
   box-sizing: border-box;
 }
+
 .gallery {
   width: 100vw;
   height: 100vh;
@@ -14,27 +15,29 @@ $header-height: 30px;
 
   &__img {
     overflow: hidden;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-   &__timer {
-  $timer-size: 150px;
-background-color: white;
-width: $timer-size;
-height: $timer-size;
-margin-top: $header-height / 2;
-border-radius: 50%;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-display: flex;
-justify-content: center;
-align-items: center;
-}
+
+  &__timer {
+    $timer-size: 100px;
+    background-color: white;
+    width: $timer-size;
+    height: $timer-size;
+    margin-top: $header-height / 2;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .header {
@@ -47,5 +50,4 @@ align-items: center;
   top: 0;
   left: 0;
   width: 100%;
-
 }

@@ -17,8 +17,8 @@
       object-fit: cover; }
   .gallery__timer {
     background-color: white;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin-top: 15px;
     border-radius: 50%;
     position: absolute;
