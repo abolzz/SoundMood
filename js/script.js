@@ -1,6 +1,5 @@
 // JS file var seconds;
-//timer
- <script type="text/javascript">
+
   var seconds;
   var temp;
  
@@ -21,4 +20,3 @@
   } 
  
   countdown();
-</script>

@@ -59,8 +59,8 @@
   <figure class="gallery__img"><img src="img/energetic-emotion.png"></figure>
   <!--timer-->
   <aside class="gallery__timer">
-  	<div id="countdown">10/div>
-    ></aside>
+  	<div id="countdown">10</div>
+    </aside>
 </section>
 
 
@@ -142,28 +142,7 @@
 
 </section>
 
-<script type="text/javascript">
-  var seconds;
-  var temp;
- 
-  function countdown() {
-    seconds = document.getElementById('countdown').innerHTML;
-    seconds = parseInt(seconds, 10);
- 
-    if (seconds == 1) {
-      temp = document.getElementById('countdown');
-      temp.innerHTML = "Done";
-      return;
-    }
- 
-    seconds--;
-    temp = document.getElementById('countdown');
-    temp.innerHTML = seconds;
-    timeoutMyOswego = setTimeout(countdown, 1000);
-  } 
- 
-  countdown();
-</script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 <!-- jQuery -->
