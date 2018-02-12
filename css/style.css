@@ -150,6 +150,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center; }
+  .gallery .gallery__imge img {
+    transform: translate(80%, 180%); }
 
 .endScreen {
   text-align: center;
