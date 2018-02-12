@@ -150,16 +150,12 @@ section {
     display: flex;
     justify-content: center;
     align-items: center; }
-  .gallery .gallery__imge img {
-    transform: translate(80%, 180%); }
 
 .endScreen {
   text-align: center;
   display: grid;
   grid-template-columns: 5% 10% 5% auto 5% 10% 5%;
-  grid-template-rows: 20% 20% 10% 10% 10% 5% auto;
-  position: fixed;
-  overflow: hidden; }
+  grid-template-rows: 20% 20% 10% 10% 10% 5% auto; }
   .endScreen .endScreen__h1 {
     grid-column-start: 2;
     grid-column-end: 7;
