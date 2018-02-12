@@ -3,65 +3,75 @@
 	display: grid;
 	grid-template-columns: 5% 10% 5% auto 5% 10% 5%;
 	grid-template-rows: 20% 20% 10% 10% 10% 5% auto;
-		.endScreen__h1 {
-			grid-column-start: 2;
-  			grid-column-end: 7;
-  			align-self: end;
-  			font-weight: bold;
-  			font-size: 1.2em;
-		}
-		.endScreen__img {
-			grid-column-start: 2;
-			grid-column-end: 7;
-			align-self: center;
-			justify-self: center;
-		}
-		.endScreen__p {
-			grid-column-start: 3;
-  			grid-column-end: 6;
-  			align-self: center;
-		}
-		// resulting song
-		.endScreen__button {
-			background-color: transparent;
-			border: none;
-			align-self: center;
-			justify-self: center;
-		}
-		.endScreen__button--play {
-			grid-column-start: 1;
-			grid-column-end: 4;
-			grid-row-start: 4;
-			grid-row-end: 6;
-		}
-		.endScreen__p--right {
-			grid-column-start: 4;
-			grid-column-end: 6;
-			text-align: left;
-		}
-		.endScreen__p--bold {
-			font-weight: bold;
-		}
-		.endScreen__p--end {
-			align-self: end;
-		}
-		.endScreen__p--start {
-			align-self: start;
-		}
-		// resulting song end
+	z-index: 3;
+	position: fixed;
+	overflow: hidden;
 
-		// suggestions
-		.endScreen__p--left {
-			grid-column-start: 4;
-			grid-column-end: 5;
-			text-align: left;
-		}
-		.endScreen__button--more {
-			grid-column-start: 4;
-			grid-column-end: 5;
-			justify-self: start;
-			align-self: start;
-		}
-		// suggestions end
+	.endScreen__h1 {
+		grid-column-start: 2;
+		grid-column-end: 7;
+		align-self: end;
+		font-weight: bold;
+		font-size: 1.2em;
+	}
 
+	.endScreen__img {
+		grid-column-start: 2;
+		grid-column-end: 7;
+		align-self: center;
+		justify-self: center;
+	}
+
+	.endScreen__p {
+		grid-column-start: 3;
+		grid-column-end: 6;
+		align-self: center;
+	}
+	// resulting song
+	.endScreen__button {
+		background-color: transparent;
+		border: none;
+		align-self: center;
+		justify-self: center;
+	}
+
+	.endScreen__button--play {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		grid-row-start: 4;
+		grid-row-end: 6;
+	}
+
+	.endScreen__p--right {
+		grid-column-start: 4;
+		grid-column-end: 6;
+		text-align: left;
+	}
+
+	.endScreen__p--bold {
+		font-weight: bold;
+	}
+
+	.endScreen__p--end {
+		align-self: end;
+	}
+
+	.endScreen__p--start {
+		align-self: start;
+	}
+	// resulting song end
+	// suggestions
+	.endScreen__p--left {
+		grid-column-start: 4;
+		grid-column-end: 5;
+		text-align: left;
+	}
+
+	.endScreen__button--more {
+		grid-column-start: 4;
+		grid-column-end: 5;
+		justify-self: start;
+		align-self: start;
+	}
+	// suggestions end
 }
