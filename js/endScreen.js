@@ -1,4 +1,5 @@
 //endScreen
+var imgEmoji = document.getElementsByClassName('gallery__img--emoji');
 /*var endScreen = document.getElementById('finalScreen').style.display = 'none';
 
 for (let i = 0; i < imgEmoji.length; i++) {
@@ -9,7 +10,7 @@ for (let i = 0; i < imgEmoji.length; i++) {
 }
 */
 //experiment
-/*for (let i = 0; i < imgEmoji.length; i++) {
+for (let i = 0; i < imgEmoji.length; i++) {
   imgEmoji.onclick = function() {
     var endScreen = document.getElementById('finalScreen');
     if (endScreen.style.display !== 'none') {
@@ -18,4 +19,4 @@ for (let i = 0; i < imgEmoji.length; i++) {
       endScreen.style.display = 'block';
     }
   };
-}*/
+}
