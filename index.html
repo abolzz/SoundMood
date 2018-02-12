@@ -33,10 +33,10 @@
 
 
 <section class="gallery">
-    <figure class="gallery__img"><a href="#"><img src="img/woman.jpg"></a></figure>
-    <figure class="gallery__img"><a href="#"><img src="img/woman.jpg"></a></figure>
-    <figure class="gallery__img"><a href="#"><img src="img/woman.jpg"></a></figure>
-    <figure class="gallery__img"><a href="#"><img src="img/woman.jpg"></a></figure>
+    <figure class="gallery__img"><img src="img/sad-picture.jpg"></figure>
+    <figure class="gallery__img"><img src="img/happy-picture.jpg"></figure>
+    <figure class="gallery__img"><img src="img/bored-picture.jpg"></figure>
+    <figure class="gallery__img"><img src="img/energetic-picture.jpg"></figure>
     <!--timer-->
     <aside class="gallery__timer">
       <h1>10<h1></aside>
@@ -53,28 +53,33 @@
 </section>
 <!--emoticons-->
 <section class="gallery">
-  <figure class="gallery__img"><a href="#"><img src="img/woman.jpg"></a></figure>
-  <figure class="gallery__img"><a href="#"><img src="img/woman.jpg"></a></figure>
-  <figure class="gallery__img"><a href="#"><img src="img/woman.jpg"></a></figure>
-  <figure class="gallery__img"><a href="#"><img src="img/woman.jpg"></a></figure>
+  <figure class="gallery__img"><img src="img/sad-emotion.png"></figure>
+  <figure class="gallery__img"><img src="img/happy-emotion.png"></figure>
+  <figure class="gallery__img"><img src="img/bored-emotion.png"></figure>
+  <figure class="gallery__img"><img src="img/energetic-emotion.png"></figure>
   <!--timer-->
   <aside class="gallery__timer">
     <h1>10<h1></aside>
 </section>
 
 
-<!--end screen-->
-<section class="endScreen">
-<h1 class="endScreen__h1">You seem to be sad...</h1>
-<img src="img/sad-emotion.png" alt="Sad Face" class="endScreen__img">
+<!-- slow result end screen (error) -->
+<section id="SlowEndScreen" class="endScreen noscroll hidden">
+<h1 class="endScreen__h1">You seem to be slow today...</h1>
+<img src="img/slow-emotion.png" alt="Emoticon" class="endScreen__img">
 <p class="endScreen__p endScreen__p--end">Try listening to this:</p>
 
 <!-- resulting song -->
-<button class="endScreen__button endScreen__button--play">
+<button class="endScreen__button endScreen__button--play" data-value=0>
+  <audio src="songs/BrunoMars-TheLazySong.mp3"></audio>
   <img src="img/play-button.svg" alt="Play Button">
 </button>
-<p class="endScreen__p endScreen__p--right endScreen__p--end endScreen__p--bold">Name of the song</p>
-<p class="endScreen__p endScreen__p--right endScreen__p--start">Artist</p>
+<button class="endScreen__button endScreen__button--pause" data-value=0>
+  <audio src="songs/BrunoMars-TheLazySong.mp3"></audio>
+  <img src="img/pause-button.svg" alt="Pause Button">
+</button>
+<p class="endScreen__p endScreen__p--right endScreen__p--end endScreen__p--bold">The Lazy Song</p>
+<p class="endScreen__p endScreen__p--right endScreen__p--start">Bruno Mars</p>
 
 <!-- other similar songs -->
 <p class="endScreen__p endScreen__p--left">Similar songs:</p>
@@ -84,6 +89,61 @@
 
 </section>
 
+<!-- sad result end screen -->
+<section id="SadEndScreen" class="endScreen noscroll hidden">
+<h1 class="endScreen__h1">You seem to be sad today...</h1>
+<img src="img/sad-emotion.png" alt="Emoticon" class="endScreen__img">
+<p class="endScreen__p endScreen__p--end">Try listening to this:</p>
+
+<!-- resulting song -->
+<button class="endScreen__button endScreen__button--play" data-value=1>
+  <audio src="songs/NIN-EveryDayIsExactlyTheSame.mp3"></audio>
+  <img src="img/play-button.svg" alt="Play Button">
+</button>
+<button class="endScreen__button endScreen__button--pause" data-value=1>
+  <audio src="songs/NIN-EveryDayIsExactlyTheSame.mp3"></audio>
+  <img src="img/pause-button.svg" alt="Pause Button">
+</button>
+<p class="endScreen__p endScreen__p--right endScreen__p--end endScreen__p--bold">Every Day is Exactly the Same</p>
+<p class="endScreen__p endScreen__p--right endScreen__p--start">Nine Inch Nails</p>
+
+<!-- other similar songs -->
+<p class="endScreen__p endScreen__p--left">Similar songs:</p>
+<button class="endScreen__button endScreen__button--more">
+  <img src="img/more-button.svg" alt="More Button">
+</button>
+
+</section>
+
+<!-- happy result end screen -->
+<section id="HappyEndScreen" class="endScreen noscroll hidden">
+<h1 class="endScreen__h1">You seem to be happy!</h1>
+<img src="img/happy-emotion.png" alt="Emoticon" class="endScreen__img">
+<p class="endScreen__p endScreen__p--end">Try listening to this:</p>
+
+<!-- resulting song -->
+<button class="endScreen__button endScreen__button--play" data-value=2>
+  <audio src="songs/PharrellWilliams-Happy.mp3"></audio>
+  <img src="img/play-button.svg" alt="Play Button">
+</button>
+<button class="endScreen__button endScreen__button--pause" data-value=2>
+  <audio src="songs/PharrellWilliams-Happy.mp3"></audio>
+  <img src="img/pause-button.svg" alt="Play Button">
+</button>
+<p class="endScreen__p endScreen__p--right endScreen__p--end endScreen__p--bold">Happy</p>
+<p class="endScreen__p endScreen__p--right endScreen__p--start">Pharrell Williams</p>
+
+<!-- other similar songs -->
+<p class="endScreen__p endScreen__p--left">Similar songs:</p>
+<button class="endScreen__button endScreen__button--more">
+  <img src="img/more-button.svg" alt="More Button">
+</button>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script src="js/script.js" type="text/javascript"></script>
  </body>
