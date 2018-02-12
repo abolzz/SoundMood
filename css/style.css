@@ -201,4 +201,7 @@ section {
     justify-self: start;
     align-self: start; }
 
+.topLayer {
+  z-index: 1000; }
+
 /*# sourceMappingURL=style.css.map */
