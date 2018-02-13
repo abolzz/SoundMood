@@ -1,7 +1,5 @@
 // JS file var seconds;
 
- 
-
 document.getElementById('ready').onclick = function(){
   document.getElementById('loadingscreen').classList.add('hidden');
 } ;
@@ -28,4 +26,23 @@ document.getElementById('ready2').onclick = function(){
   } ;
  
   countdown();
+
+    // after 10 seconds error screen appears
+  error = setTimeout(function(){
+    document.getElementById("SlowEndScreen").classList.add("topLayer");
+   }, 10000);
 } ;
+
+  // after 10 seconds error screen appears
+  error = setTimeout(function(){
+    document.getElementById("endScreen").classList.add("topLayer");
+   }, 10000);
+
+
+// default result if nothing is selected by user
+var result = "slow";
+
+var error;
+
+var firstRound = document.getElementsByClassName('gallery__img');
+console.log(result);
