@@ -34,6 +34,8 @@ section {
 
 /*css rules for loading page start */
 .loader {
+  position: absolute;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,6 +58,8 @@ section {
 /*end*/
 /*  sceens with instruction */
 .instruction {
+  position: absolute;
+  z-index: 8;
   text-align: center;
   height: 100vh;
   font-size: 25px; }
@@ -72,6 +76,14 @@ section {
   text-align: center;
   text-decoration: none;
   font-size: 16px; }
+
+.noscroll {
+  position: fixed;
+  overflow: hidden; }
+
+/* for hiding section */
+.hidden {
+  display: none; }
 
 /*end*/
 * {

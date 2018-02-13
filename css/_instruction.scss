@@ -1,6 +1,8 @@
 /*  sceens with instruction */
 
 	.instruction {
+		position: absolute;
+        z-index: 8;
 		text-align:center;
 		height:100vh;
 		font-size:25px;
@@ -22,6 +24,15 @@
 	    font-size: 16px;
 
 	}
+
+	.noscroll {
+  position: fixed;
+  overflow: hidden; }
+
+/* for hiding section */
+.hidden {
+  display: none;
+}
 	/*end*/
 
 

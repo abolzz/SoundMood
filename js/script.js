@@ -20,3 +20,7 @@
   } 
  
   countdown();
+
+document.getElementById('ready').onclick = function(){
+  document.getElementById('loadingscreen').classList.add('hidden');
+} ;

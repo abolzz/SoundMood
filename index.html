@@ -20,19 +20,20 @@
 </header>
 
 <!--loading screen-->
-<section class="loader">
+<section id="loadingscreen" class="loader  noscroll">
 <p class="loader__p loader__p--bold animated zoomIn">SoundMood</p>
 <p class="loader__p">Let the music take over</p>
+<button id="ready">Ready</button>
 </section>
 
 <!--first screen with instruction-->
-<section class="instruction">
+<section class="instruction ">
   <p class="instruction__p animated animated zoomIn">Choose the photo which <br>suits your current mood.</p>
   <button class="instruction__button">OK</button>
 </section>
 
 
-<section id="gallery1" class="gallery">
+<section id="gallery1" class="gallery  noscroll">
     <figure class="gallery__img"><img src="img/sad-picture.jpg"></figure>
     <figure class="gallery__img"><img src="img/happy-picture.jpg"></figure>
     <figure class="gallery__img"><img src="img/bored-picture.jpg"></figure>
@@ -42,17 +43,17 @@
       <h1>10<h1></aside>
 </section>
 <!-- GIF -->
-<section class="gifScreen">
+<section class="gifScreen  noscroll">
   <img src="img/funny-gif.gif" alt="Funny GIF" class="gifScreen__gif">
   
 </section>
 <!--second screen instruction-->
-<section class="instruction">
+<section class="instruction  noscroll">
   <p class="instruction__p animated animated zoomIn">Choose the emoticon which <br>suits your current mood.</p>
   <button class="instruction__button">OK</button>
 </section>
 <!--emoticons-->
-<section id="gallery2" class="gallery">
+<section id="gallery2" class="gallery  noscroll">
   <figure class="gallery__img"><img src="img/sad-emotion.png"></figure>
   <figure class="gallery__img"><img src="img/happy-emotion.png"></figure>
   <figure class="gallery__img"><img src="img/bored-emotion.png"></figure>
@@ -65,7 +66,7 @@
 
 
 <!-- slow result end screen (error) -->
-<section id="SlowEndScreen" class="endScreen">
+<section id="SlowEndScreen" class="endScreen  noscroll">
 <h1 class="endScreen__h1">You seem to be slow today...</h1>
 <img src="img/slow-emotion.png" alt="Emoticon" class="endScreen__img">
 <p class="endScreen__p endScreen__p--end">Try listening to this:</p>
@@ -91,7 +92,7 @@
 </section>
 
 <!-- sad result end screen -->
-<section id="SadEndScreen" class="endScreen">
+<section id="SadEndScreen" class="endScreen  noscroll">
 <h1 class="endScreen__h1">You seem to be sad today...</h1>
 <img src="img/sad-emotion.png" alt="Emoticon" class="endScreen__img">
 <p class="endScreen__p endScreen__p--end">Try listening to this:</p>
@@ -117,7 +118,7 @@
 </section>
 
 <!-- happy result end screen -->
-<section id="HappyEndScreen" class="endScreen">
+<section id="HappyEndScreen" class="endScreen  noscroll">
 <h1 class="endScreen__h1">You seem to be happy!</h1>
 <img src="img/happy-emotion.png" alt="Emoticon" class="endScreen__img">
 <p class="endScreen__p endScreen__p--end">Try listening to this:</p>
