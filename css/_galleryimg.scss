@@ -5,7 +5,6 @@ $header-height: 30px;
 }
 
 .gallery {
-  z-index: 7;
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -39,4 +38,8 @@ $header-height: 30px;
     justify-content: center;
     align-items: center;
   }
+}
+
+#gallery1 {
+  z-index: 7;
 }

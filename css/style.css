@@ -82,16 +82,12 @@ section {
   position: fixed;
   overflow: hidden; }
 
-/* for hiding section */
-.hidden {
-  display: none; }
-
 #instruction1 {
   z-index: 8;
   /*end*/ }
 
 #instruction2 {
-  z-index: 6;
+  z-index: 5;
   /*end*/ }
 
 * {
@@ -126,12 +122,20 @@ section {
     align-items: center; }
 
 #gallery1 {
-  z-index: 7;
-}
+  z-index: 7; }
 
 .gifScreen {
-  z-index: 6;
-}
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto; }
+  .gifScreen .gifScreen__gif {
+    grid-column-start: 1;
+    align-self: center;
+    justify-self: center; }
+
+#gifScreen {
+  z-index: 6; }
 
 #gallery2 {
   z-index: 4; }
@@ -193,5 +197,9 @@ section {
 
 .topLayer {
   z-index: 9; }
+
+/* for hiding section */
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

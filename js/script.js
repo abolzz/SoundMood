@@ -4,7 +4,7 @@ document.getElementById('ready').onclick = function(){
   document.getElementById('loadingscreen').classList.add('hidden');
 } ;
 
-document.getElementById('ready2').onclick = function(){
+document.getElementById('ok').onclick = function(){
   document.getElementById('instruction1').classList.add('hidden');
    var seconds;
   var temp;
@@ -52,11 +52,15 @@ for (var i = 0; i < firstRound.length; i++) {
     setTimeout(function(){
      document.getElementById("gifScreen").classList.add("hidden");
       // animation
-      document.getElementById("instructionP2").classList.add("zoomIn");
-      document.getElementById("ok2").classList.add("zoomIn");
+      //document.getElementById("instructionP2").classList.add("zoomIn");
+      //document.getElementById("ok2").classList.add("zoomIn");
     }, 5000);
   }
 };
+
+document.getElementById('ok2').onclick = function(){
+  document.getElementById('instruction2').classList.add('hidden');
+} ;
 
 new Vue({
   el: '#gallery2',

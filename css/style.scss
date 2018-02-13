@@ -29,3 +29,8 @@ section {
 @import 'gifScreen';
 @import 'galleryemoticon';
 @import 'endScreen';
+
+/* for hiding section */
+.hidden {
+  display: none;
+}
