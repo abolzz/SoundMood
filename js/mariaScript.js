@@ -9,7 +9,6 @@ function playAudio() {
 function pauseAudio() {
   myAudio.pause();
 }*/
-
 var audio = document.getElementsByTagName('audio');
 var playButton = document.getElementsByClassName('endScreen__button--play');
 var pauseButton = document.getElementsByClassName('endScreen__button--pause');
@@ -38,20 +37,3 @@ function pauseAudio() {
     audio[i].pause();
   }
 }
-
-$(document).ready(function() {
-  var audioElement = document.getElementById('audio');
-  $('#pauseButtonImg').hide();
-
-  $('#playButton').click(function() {
-    $('#playButtonImg').hide();
-    $('#pauseButtonImg').show();
-    audioElement.play();
-  });
-
-  $('#pauseButton').click(function() {
-    $('#playButtonImg').show();
-    $('#pauseButtonImg').hide();
-    audioElement.pause();
-  });
-});
