@@ -2,7 +2,6 @@
 
 	.instruction {
 		position: absolute;
-        z-index: 8;
 		text-align:center;
 		height:100vh;
 		font-size:25px;
@@ -33,6 +32,15 @@
 .hidden {
   display: none;
 }
+
+#instruction1{
+	z-index:8;
 	/*end*/
+}
+#instruction2{
+	z-index:6;
+	/*end*/
+}
+
 
 
