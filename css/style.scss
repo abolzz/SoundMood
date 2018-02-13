@@ -30,6 +30,23 @@ section {
 @import 'galleryemoticon';
 @import 'endScreen';
 
+/* timer styles */
+.jst-hours {
+  display: none;
+}
+.jst-minutes {
+  display: none;
+}
+.jst-seconds {
+  float: left;
+}
+.jst-clearDiv {
+  clear: both;
+}
+.jst-timeout {
+  color: red;
+}
+
 /* for hiding section */
 .hidden {
   display: none;

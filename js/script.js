@@ -3,30 +3,23 @@
 document.getElementById('ready').onclick = function(){
   document.getElementById('loadingscreen').classList.add('hidden');
 } ;
+ 
+ // first selection round timer
+$("#ok").click(function(){
+  $('#timer').addClass('timer-quick');
+  $('.timer-quick').startTimer();
+    console.log('timer works');
+});
+
+// second selection round timer
+$("#ok2").click(function(){
+  $('#timer2').addClass('timer-quick');
+  $('.timer-quick').startTimer();
+    console.log('timer works');
+});
 
 document.getElementById('ok').onclick = function(){
   document.getElementById('instruction1').classList.add('hidden');
-   var seconds;
-  var temp;
- 
-  function countdown() {
-    seconds = document.getElementById('countdown').innerHTML;
-    seconds = parseInt(seconds, 10);
- 
-    if (seconds == 1) {
-      temp = document.getElementById('countdown');
-      temp.innerHTML = "Done";
-      return;
-    };
- 
-    seconds--;
-    temp = document.getElementById('countdown');
-    temp.innerHTML = seconds;
-    timeoutMyOswego = setTimeout(countdown, 1000);
-  } ;
- 
-  countdown();
-
     // after 10 seconds error screen appears
   error = setTimeout(function(){
     document.getElementById("SlowEndScreen").classList.add("topLayer");
@@ -60,6 +53,10 @@ for (var i = 0; i < firstRound.length; i++) {
 
 document.getElementById('ok2').onclick = function(){
   document.getElementById('instruction2').classList.add('hidden');
+      // after 10 seconds error screen appears
+  error = setTimeout(function(){
+    document.getElementById("SlowEndScreen").classList.add("topLayer");
+   }, 10000);
 } ;
 
 new Vue({
