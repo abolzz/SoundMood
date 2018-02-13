@@ -20,52 +20,70 @@
 </header>
 
 <!--loading screen-->
-<section class="loader">
+<section id="loadingscreen" class="loader  noscroll">
 <p class="loader__p loader__p--bold animated zoomIn">SoundMood</p>
 <p class="loader__p">Let the music take over</p>
+<button id="ready">Ready</button>
 </section>
 
 <!--first screen with instruction-->
-<section class="instruction">
+<section id="instruction1" class="instruction ">
   <p class="instruction__p animated animated zoomIn">Choose the photo which <br>suits your current mood.</p>
-  <button class="instruction__button">OK</button>
+  <button id="ready2" class="instruction__button">OK</button>
 </section>
 
 
+<<<<<<< HEAD
 <section id="gallery1" class="gallery">
     <figure class="gallery__img"><img src="img/sad-picture.jpg" data-value='sad'></figure>
     <figure class="gallery__img"><img src="img/happy-picture.jpg" data-value='happy'></figure>
     <figure class="gallery__img"><img src="img/bored-picture.jpg" data-value='bored'></figure>
     <figure class="gallery__img"><img src="img/energetic-picture.jpg" data-value='energetic'></figure>
+=======
+<section id="gallery1" class="gallery  noscroll">
+    <figure class="gallery__img"><img src="img/sad-picture.jpg"></figure>
+    <figure class="gallery__img"><img src="img/happy-picture.jpg"></figure>
+    <figure class="gallery__img"><img src="img/bored-picture.jpg"></figure>
+    <figure class="gallery__img"><img src="img/energetic-picture.jpg"></figure>
+>>>>>>> 9dcfa25e61b13d6a6c86783e742d2f4c235f4250
     <!--timer-->
-    <aside class="gallery__timer">
-      <h1>10<h1></aside>
+   <aside class="gallery__timer">
+  	<div id="countdown">10</div>
+    </aside>
 </section>
 <!-- GIF -->
-<section class="gifScreen">
+<section class="gifScreen  noscroll">
   <img src="img/funny-gif.gif" alt="Funny GIF" class="gifScreen__gif">
   
 </section>
 <!--second screen instruction-->
-<section class="instruction">
+<section id="instruction2" class="instruction  noscroll">
   <p class="instruction__p animated animated zoomIn">Choose the emoticon which <br>suits your current mood.</p>
   <button class="instruction__button">OK</button>
 </section>
 <!--emoticons-->
+<<<<<<< HEAD
 <section id="gallery2" class="gallery">
   <figure class="gallery__img" class="emoticons"><img src="img/sad-emotion.png" data-value='sad'></figure>
   <figure class="gallery__img" class="emoticons"><img src="img/happy-emotion.png" data-value='happy'></figure>
   <figure class="gallery__img" class="emoticons"><img src="img/bored-emotion.png" data-value='bored'></figure>
   <figure class="gallery__img" class="emoticons"><img src="img/energetic-emotion.png" data-value='energetic'></figure>
+=======
+<section id="gallery2" class="gallery  noscroll">
+  <figure class="gallery__img"><img src="img/sad-emotion.png"></figure>
+  <figure class="gallery__img"><img src="img/happy-emotion.png"></figure>
+  <figure class="gallery__img"><img src="img/bored-emotion.png"></figure>
+  <figure class="gallery__img"><img src="img/energetic-emotion.png"></figure>
+>>>>>>> 9dcfa25e61b13d6a6c86783e742d2f4c235f4250
   <!--timer-->
   <aside class="gallery__timer">
-  	<div id="countdown">10/div>
-    ></aside>
+  	<div id="countdown">10</div>
+    </aside>
 </section>
 
 
 <!-- slow result end screen (error) -->
-<section id="SlowEndScreen" class="endScreen">
+<section id="SlowEndScreen" class="endScreen  noscroll">
 <h1 class="endScreen__h1">You seem to be slow today...</h1>
 <img src="img/slow-emotion.png" alt="Emoticon" class="endScreen__img">
 <p class="endScreen__p endScreen__p--end">Try listening to this:</p>
@@ -91,7 +109,7 @@
 </section>
 
 <!-- sad result end screen -->
-<section id="SadEndScreen" class="endScreen">
+<section id="SadEndScreen" class="endScreen  noscroll">
 <h1 class="endScreen__h1">You seem to be sad today...</h1>
 <img src="img/sad-emotion.png" alt="Emoticon" class="endScreen__img">
 <p class="endScreen__p endScreen__p--end">Try listening to this:</p>
@@ -117,7 +135,7 @@
 </section>
 
 <!-- happy result end screen -->
-<section id="HappyEndScreen" class="endScreen">
+<section id="HappyEndScreen" class="endScreen  noscroll">
 <h1 class="endScreen__h1">You seem to be happy!</h1>
 <img src="img/happy-emotion.png" alt="Emoticon" class="endScreen__img">
 <p class="endScreen__p endScreen__p--end">Try listening to this:</p>
@@ -142,28 +160,7 @@
 
 </section>
 
-<script type="text/javascript">
-  var seconds;
-  var temp;
- 
-  function countdown() {
-    seconds = document.getElementById('countdown').innerHTML;
-    seconds = parseInt(seconds, 10);
- 
-    if (seconds == 1) {
-      temp = document.getElementById('countdown');
-      temp.innerHTML = "Done";
-      return;
-    }
- 
-    seconds--;
-    temp = document.getElementById('countdown');
-    temp.innerHTML = seconds;
-    timeoutMyOswego = setTimeout(countdown, 1000);
-  } 
- 
-  countdown();
-</script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 <!-- jQuery -->

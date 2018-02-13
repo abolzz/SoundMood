@@ -1,5 +1,7 @@
 /*css rules for loading page start */
 	.loader {
+		position: absolute;
+        z-index: 11;
 		display:flex;
 		flex-direction:column;
 		justify-content: center;
