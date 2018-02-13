@@ -20,7 +20,7 @@
 </header>
 
 <!--loading screen-->
-<section id="loadingscreen" class="loader  noscroll">
+<section id="loadingscreen" class="loader noscroll">
 <p class="loader__p loader__p--bold animated zoomIn">SoundMood</p>
 <p class="loader__p">Let the music take over</p>
 <button id="ready">Ready</button>
@@ -32,12 +32,11 @@
   <button id="ready2" class="instruction__button">OK</button>
 </section>
 
-
-<section id="gallery1" class="gallery  noscroll">
-    <figure class="gallery__img"><img src="img/sad-picture.jpg"></figure>
-    <figure class="gallery__img"><img src="img/happy-picture.jpg"></figure>
-    <figure class="gallery__img"><img src="img/bored-picture.jpg"></figure>
-    <figure class="gallery__img"><img src="img/energetic-picture.jpg"></figure>
+<section id="gallery1" class="gallery noscroll">
+    <figure class="gallery__img"><img src="img/sad-picture.jpg" data-value='sad'></figure>
+    <figure class="gallery__img"><img src="img/happy-picture.jpg" data-value='happy'></figure>
+    <figure class="gallery__img"><img src="img/bored-picture.jpg" data-value='bored'></figure>
+    <figure class="gallery__img"><img src="img/energetic-picture.jpg" data-value='energetic'></figure>
     <!--timer-->
    <aside class="gallery__timer">
   	<div id="countdown">10</div>
@@ -54,11 +53,11 @@
   <button class="instruction__button">OK</button>
 </section>
 <!--emoticons-->
-<section id="gallery2" class="gallery  noscroll">
-  <figure class="gallery__img"><img src="img/sad-emotion.png"></figure>
-  <figure class="gallery__img"><img src="img/happy-emotion.png"></figure>
-  <figure class="gallery__img"><img src="img/bored-emotion.png"></figure>
-  <figure class="gallery__img"><img src="img/energetic-emotion.png"></figure>
+<section id="gallery2" class="gallery">
+  <figure class="gallery__img" class="emoticons"><img src="img/sad-emotion.png" data-value='sad'></figure>
+  <figure class="gallery__img" class="emoticons"><img src="img/happy-emotion.png" data-value='happy'></figure>
+  <figure class="gallery__img" class="emoticons"><img src="img/bored-emotion.png" data-value='bored'></figure>
+  <figure class="gallery__img" class="emoticons"><img src="img/energetic-emotion.png" data-value='energetic'></figure>
   <!--timer-->
   <aside class="gallery__timer">
   	<div id="countdown">10</div>
@@ -143,8 +142,6 @@
 </button>
 
 </section>
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 <!-- jQuery -->
