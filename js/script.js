@@ -5,11 +5,15 @@ soundEffectAudio.src = "songs/click.mp3";
 // JS file var seconds;
 
 document.getElementById('ready').onclick = function() {
-  document.getElementById('loadingscreen').classList.add('hidden');
+  setTimeout(function() {
+  document.getElementById("loadingscreen").classList.add("hidden");
+  }, 1000);
+  document.getElementById('loadingscreen').classList.add('bounceOutLeft');
   soundEffectAudio.play();
   // animation
   document.getElementById("instructionP").classList.add("zoomIn");
   document.getElementById("ok").classList.add("zoomIn");
+
 };
 
 // first selection round timer
@@ -29,7 +33,10 @@ $("#ok2").click(function() {
 var error;
 
 document.getElementById('ok').onclick = function() {
-  document.getElementById('instruction1').classList.add('hidden');
+  setTimeout(function() {
+  document.getElementById("instruction1").classList.add("hidden");
+  }, 1000);
+  document.getElementById('instruction1').classList.add('bounceOutLeft');
   soundEffectAudio.play();
   // after 10 seconds error screen appears
   error = setTimeout(function() {
@@ -52,20 +59,32 @@ for (var i = 0; i < firstRound.length; i++) {
     soundEffectAudio.play();
     // because the user clicked on one of the images the timeOut for error screen gets cleared
     clearTimeout(error);
+     document.getElementById("gallery1").classList.add("bounceOutLeft");
+     setTimeout(function() {
     document.getElementById("gallery1").classList.add("hidden");
+  }, 1000);
     // makes the gifScreen disappear after 10 seconds
     setTimeout(function() {
-      document.getElementById("gifScreen").classList.add("hidden");
       // animation
       document.getElementById("instructionP2").classList.add("zoomIn");
       document.getElementById("ok2").classList.add("zoomIn");
-    }, 5000);
+    }, 6000);
+              setTimeout(function() {
+                document.getElementById("gifScreen").classList.add("bounceOutLeft");
+              }, 6000);
+              setTimeout(function() {
+                    document.getElementById("gifScreen").classList.add("hidden");
+              }, 7000);
   }
 };
 
 document.getElementById('ok2').onclick = function() {
-  document.getElementById('instruction2').classList.add('hidden');
   soundEffectAudio.play();
+   clearTimeout(error);
+     setTimeout(function() {
+    document.getElementById("instruction2").classList.add("hidden");
+  }, 1000);
+            document.getElementById("instruction2").classList.add("bounceOutLeft");
   // after 10 seconds error screen appears
   error = setTimeout(function() {
     document.getElementById("SlowEndScreen").classList.add("topLayer");
@@ -76,6 +95,10 @@ new Vue({
   el: '#gallery2',
   methods: {
     showResult: function() {
+      setTimeout(function() {
+    document.getElementById("gallery2").classList.add("hidden");
+  }, 1000);
+            document.getElementById("gallery2").classList.add("bounceOutLeft");
       var value = event.target.getAttribute('data-value');
       console.log(value);
       // combination of both selections (concatinated)
@@ -84,13 +107,19 @@ new Vue({
       soundEffectAudio.play();
       // result calculation
       if (result == "happyhappy" || result == "happyenergetic" || result == "energetichappy" || result == "energeticenergetic") {
+              setTimeout(function() {
         document.getElementById("HappyEndScreen").classList.add("topLayer");
+                }, 1000);
         console.log(result);
       } else if (result == "sadsad" || result == "sadbored" || result == "boredsad" || result == "boredbored") {
+        setTimeout(function() {
         document.getElementById("SadEndScreen").classList.add("topLayer");
+        }, 1000);
         console.log(result);
       } else {
+        setTimeout(function() {
         document.getElementById("SlowEndScreen").classList.add("topLayer");
+        }, 1000);
         console.log(result);
       }
     }

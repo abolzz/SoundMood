@@ -21,7 +21,7 @@
   </header>
 
   <!--loading screen-->
-  <section id="loadingscreen" class="loader noscroll">
+  <section id="loadingscreen" class="loader noscroll animated">
     <p class="loader__p loader__p--bold animated zoomIn">SoundMood</p>
     <p class="loader__p animated zoomIn">Let the music take over</p>
     <audio id="buttonSound"></audio>
@@ -29,13 +29,13 @@
   </section>
 
   <!--first screen with instruction-->
-  <section id="instruction1" class="instruction noscroll">
+  <section id="instruction1" class="instruction noscroll animated">
     <p id="instructionP" class="instruction__p animated animated">Choose the photo which <br>suits your current mood.</p>
     <button id="ok" class="instruction__button animated">OK</button>
   </section>
 
 
-  <section id="gallery1" class="gallery noscroll">
+  <section id="gallery1" class="gallery noscroll animated">
     <figure class="gallery__img"><img src="img/sad-picture.jpg" data-value='sad'></figure>
     <figure class="gallery__img"><img src="img/happy-picture.jpg" data-value='happy'></figure>
     <figure class="gallery__img"><img src="img/bored-picture.jpg" data-value='bored'></figure>
@@ -46,17 +46,17 @@
     </aside>
   </section>
   <!-- GIF -->
-  <section id="gifScreen" class="gifScreen noscroll">
+  <section id="gifScreen" class="gifScreen noscroll animated">
     <img src="img/funny-gif.gif" alt="Funny GIF" class="gifScreen__gif">
 
   </section>
   <!--second screen instruction-->
-  <section id="instruction2" class="instruction noscroll">
+  <section id="instruction2" class="instruction noscroll animated">
     <p id="instructionP2" class="instruction__p animated animated">Choose the emoticon which <br>suits your current mood.</p>
     <button id="ok2" class="instruction__button animated">OK</button>
   </section>
   <!--emoticons-->
-  <section id="gallery2" class="gallery noscroll">
+  <section id="gallery2" class="gallery noscroll animated">
     <figure class="gallery__img gallery__img--emoticon"><img v-on:click="showResult" class="gallery__img--face" src="img/sad-emotion.png" data-value='sad'></figure>
     <figure class="gallery__img gallery__img--emoticon"><img v-on:click="showResult" class="gallery__img--face" src="img/happy-emotion.png" data-value='happy'></figure>
     <figure class="gallery__img gallery__img--emoticon"><img v-on:click="showResult" class="gallery__img--face" src="img/bored-emotion.png" data-value='bored'></figure>
