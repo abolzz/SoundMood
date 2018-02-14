@@ -5,16 +5,35 @@ $header-height: 50px;
 }
 
 .header {
+  display: flex;
   font-family: Quantum;
   position:absolute;
   z-index: 10;
   background-color: #000066;
   color: white;
   height: $header-height;
-  text-align: center;
-  padding-top: 0.5em;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+
+  & h1 {
+    width: 60%;
+    display: inline-block;
+    text-align: center;
+    align-self: center;
+  }
+  & button {
+    width: 20%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+  }
+  & img {
+    align-self: center;
+    
+  }
+  & div {
+    width: 20%;
+  }
 }

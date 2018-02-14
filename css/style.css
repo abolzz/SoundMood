@@ -18,22 +18,41 @@ section {
   width: 100vw;
   height: 100vh; }
 
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  outline: none; }
+
 * {
   box-sizing: border-box; }
 
 .header {
+  display: flex;
   font-family: Quantum;
   position: absolute;
   z-index: 10;
   background-color: #000066;
   color: white;
   height: 50px;
-  text-align: center;
-  padding-top: 0.5em;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%; }
+  .header h1 {
+    width: 60%;
+    display: inline-block;
+    text-align: center;
+    align-self: center; }
+  .header button {
+    width: 20%;
+    align-self: center;
+    display: flex;
+    justify-content: center; }
+  .header img {
+    align-self: center; }
+  .header div {
+    width: 20%; }
 
 /*css rules for loading page start */
 .loader {
@@ -76,7 +95,6 @@ section {
 .instruction__button {
   margin-top: 20%;
   background-color: #4CAF50;
-  border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;

@@ -1,8 +1,17 @@
+// JS file
+
 var soundEffectAudio = document.getElementById('buttonSound');
 soundEffectAudio.src = "songs/click.mp3";
 
-
-// JS file var seconds;
+// reload button
+new Vue({
+  el: '#reload',
+  methods: {
+    reloadApp: function() {
+      location.reload();
+    }
+  }
+});
 
 document.getElementById('ready').onclick = function() {
   setTimeout(function() {
