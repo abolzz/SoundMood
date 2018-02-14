@@ -1,33 +1,32 @@
 /*css rules for loading page start */
-	.loader {
-		position: absolute;
-        z-index: 11;
-		display:flex;
-		flex-direction:column;
-		justify-content: center;
-		text-align:center;
-	    height: 100vh;
-		background-color: lightblue;
-		background-image: url("../img/pct5.jpg");
-		background-repeat: no-repeat;
-		background-size:cover;
 
-     
-	}
-	.loader__p.loader__p--bold {
-		font-size:55px;
-		color:white;
-		font-family: Quantum;
+.loader {
+	position: absolute;
+	z-index: 11;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	height: 100vh;
+	background-color: #fff;
+	background-image: url("../img/pct5.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
+.loader__p.loader__p--bold {
+	font-size: 55px;
+	color: white;
+	font-family: Quantum;
+}
 
-	}
-	.loader__p {
-		font-size:25px;
-			color:white;
+.loader__p {
+	font-size: 25px;
+	color: white;
+}
 
-	}
-	#ready {
-		align-self: center;
-		margin-top: 5%;
-	}
-	/*end*/
+#ready {
+	align-self: center;
+	margin-top: 5%;
+}
+/*end*/

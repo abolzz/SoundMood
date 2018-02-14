@@ -44,7 +44,7 @@ section {
   justify-content: center;
   text-align: center;
   height: 100vh;
-  background-color: lightblue;
+  background-color: #fff;
   background-image: url("../img/pct5.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
