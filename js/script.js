@@ -123,3 +123,12 @@ $(document).ready(function() {
       }
     }
 });
+
+//sound effect//
+var soundEffect = document.getElementsByClassName("instruction__button");
+var = soundEffectAudio = document.getElementsByClassName("")
+for(var i = 0; i < soundEffect.length; i++){
+soundEffect[i].onclick = function(event) {
+
+}
+}
