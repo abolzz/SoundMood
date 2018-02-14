@@ -1,7 +1,8 @@
 // JS file
 
+// sound effect for buttons
 var soundEffectAudio = document.getElementById('buttonSound');
-soundEffectAudio.src = "songs/click.mp3";
+soundEffectAudio.src = "sounds/click.mp3";
 
 // reload button
 new Vue({
@@ -13,13 +14,14 @@ new Vue({
   }
 });
 
+// loading screen dissapears
 document.getElementById('ready').onclick = function() {
   setTimeout(function() {
   document.getElementById("loadingscreen").classList.add("hidden");
   }, 1000);
-  document.getElementById('loadingscreen').classList.add('bounceOutLeft');
   soundEffectAudio.play();
   // animation
+  document.getElementById('loadingscreen').classList.add('bounceOutLeft');
   document.getElementById("instructionP").classList.add("zoomIn");
   document.getElementById("ok").classList.add("zoomIn");
 
@@ -39,6 +41,7 @@ $("#ok2").click(function() {
   console.log('timer works');
 });
 
+// for setting and clearing timeouts
 var error;
 
 document.getElementById('ok').onclick = function() {
@@ -54,6 +57,7 @@ document.getElementById('ok').onclick = function() {
             }, 300);
     document.getElementById("gallery1").classList.add("bounceOutLeft");
     document.getElementById("SlowEndScreen").classList.add("zoomIn");
+    document.getElementById("errorSound").play();
   }, 11000);
 };
 
@@ -63,9 +67,11 @@ var firstRound = document.getElementsByClassName('gallery__img');
 console.log(result);
 
 // first round of selections - picture selection
-for (var i = 0; i < firstRound.length; i++) {
-  firstRound[i].onclick = function(event) {
-    var value = event.target.getAttribute('data-value');
+new Vue({
+  el: '#gallery1',
+  methods: {
+    firstResult: function() {
+          var value = event.target.getAttribute('data-value');
     console.log(value);
     result = value;
     console.log(result);
@@ -75,7 +81,7 @@ for (var i = 0; i < firstRound.length; i++) {
      document.getElementById("gallery1").classList.add("bounceOutLeft");
      setTimeout(function() {
     document.getElementById("gallery1").classList.add("hidden");
-  }, 1000);
+    }, 1000);
     // makes the gifScreen disappear after 10 seconds
     setTimeout(function() {
       // animation
@@ -88,8 +94,9 @@ for (var i = 0; i < firstRound.length; i++) {
               setTimeout(function() {
                     document.getElementById("gifScreen").classList.add("hidden");
               }, 7000);
+    }
   }
-};
+});
 
 document.getElementById('ok2').onclick = function() {
   soundEffectAudio.play();
@@ -105,9 +112,11 @@ document.getElementById('ok2').onclick = function() {
             }, 300);
     document.getElementById("gallery2").classList.add("bounceOutLeft");
     document.getElementById("SlowEndScreen").classList.add("zoomIn");
+    document.getElementById("errorSound").play();
   }, 11000);
 };
 
+// second round of selections
 new Vue({
   el: '#gallery2',
   methods: {
