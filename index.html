@@ -28,8 +28,8 @@
 
 <!--first screen with instruction-->
 <section id="instruction1" class="instruction noscroll">
-  <p class="instruction__p animated animated zoomIn">Choose the photo which <br>suits your current mood.</p>
-  <button id="ok" class="instruction__button">OK</button>
+  <p id="instructionP" class="instruction__p animated animated">Choose the photo which <br>suits your current mood.</p>
+  <button id="ok" class="instruction__button animated">OK</button>
 </section>
 
 
@@ -50,15 +50,15 @@
 </section>
 <!--second screen instruction-->
 <section id="instruction2" class="instruction noscroll">
-  <p class="instruction__p animated animated zoomIn">Choose the emoticon which <br>suits your current mood.</p>
-  <button id="ok2" class="instruction__button">OK</button>
+  <p id="instructionP2" class="instruction__p animated animated">Choose the emoticon which <br>suits your current mood.</p>
+  <button id="ok2" class="instruction__button animated">OK</button>
 </section>
 <!--emoticons-->
 <section id="gallery2" class="gallery noscroll">
-  <figure class="gallery__img"><img src="img/sad-emotion.png" data-value='sad'></figure>
-  <figure class="gallery__img"><img src="img/happy-emotion.png" data-value='happy'></figure>
-  <figure class="gallery__img"><img src="img/bored-emotion.png" data-value='bored'></figure>
-  <figure class="gallery__img"><img src="img/energetic-emotion.png" data-value='energetic'></figure>
+  <figure class="gallery__img"><img v-on:click="showResult" src="img/sad-emotion.png" data-value='sad'></figure>
+  <figure class="gallery__img"><img v-on:click="showResult" src="img/happy-emotion.png" data-value='happy'></figure>
+  <figure class="gallery__img"><img v-on:click="showResult" src="img/bored-emotion.png" data-value='bored'></figure>
+  <figure class="gallery__img"><img v-on:click="showResult" src="img/energetic-emotion.png" data-value='energetic'></figure>
   <!--timer-->
   <aside class="gallery__timer">
   	<div id="timer2"  data-seconds-left="10"></div>

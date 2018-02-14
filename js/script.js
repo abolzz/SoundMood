@@ -2,6 +2,9 @@
 
 document.getElementById('ready').onclick = function(){
   document.getElementById('loadingscreen').classList.add('hidden');
+  // animation
+  document.getElementById("instructionP").classList.add("zoomIn");
+  document.getElementById("ok").classList.add("zoomIn");
 } ;
  
  // first selection round timer
@@ -17,6 +20,8 @@ $("#ok2").click(function(){
   $('.timer-quick').startTimer();
     console.log('timer works');
 });
+
+var error;
 
 document.getElementById('ok').onclick = function(){
   document.getElementById('instruction1').classList.add('hidden');
@@ -45,8 +50,8 @@ for (var i = 0; i < firstRound.length; i++) {
     setTimeout(function(){
      document.getElementById("gifScreen").classList.add("hidden");
       // animation
-      //document.getElementById("instructionP2").classList.add("zoomIn");
-      //document.getElementById("ok2").classList.add("zoomIn");
+      document.getElementById("instructionP2").classList.add("zoomIn");
+      document.getElementById("ok2").classList.add("zoomIn");
     }, 5000);
   }
 };
@@ -83,7 +88,38 @@ new Vue({
   }
 });
 
-var error;
+// play and pause buttons
+var playButtons = document.getElementsByClassName('endScreen__button--play');
+console.log(playButtons);
+var pauseButtons = document.getElementsByClassName('endScreen__button--pause');
+var audio = document.getElementsByTagName('audio');
+console.log(audio);
 
-var firstRound = document.getElementsByClassName('gallery__img');
-console.log(result);
+$(document).ready(function() {
+  $(document.getElementsByClassName('endScreen__button--pause')).hide();
+    for (var i = 0; i < playButtons.length; i++) {
+      playButtons[i].onclick = function (event) {
+        var value = $(this).attr('data-value');
+        $(document.getElementsByClassName('endScreen__button--play')).hide();
+        $(document.getElementsByClassName('endScreen__button--pause')).show();
+          if (value == 1){
+          audio[i].play();
+          } else {
+            audio[i+2].play();
+          }
+      }
+    }
+
+    for (var i = 0; i < pauseButtons.length; i++) {
+      pauseButtons[i].onclick = function (event) {
+        var value = $(this).attr('data-value');
+        $(document.getElementsByClassName('endScreen__button--pause')).hide();
+        $(document.getElementsByClassName('endScreen__button--play')).show();
+          if (value == 1){
+          audio[i].pause();
+          } else {
+            audio[i+2].pause();
+          }
+      }
+    }
+});
