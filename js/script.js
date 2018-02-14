@@ -61,6 +61,7 @@ document.getElementById('ok').onclick = function() {
   }, 11000);
 };
 
+// default result
 var result = "slow";
 
 var firstRound = document.getElementsByClassName('gallery__img');
