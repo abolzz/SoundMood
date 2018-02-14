@@ -92,7 +92,7 @@ new Vue({
 var playButtons = document.getElementsByClassName('endScreen__button--play');
 console.log(playButtons);
 var pauseButtons = document.getElementsByClassName('endScreen__button--pause');
-var audio = document.getElementsByTagName('audio');
+var audio = document.getElementsByClassName('songs');
 console.log(audio);
 
 $(document).ready(function() {
