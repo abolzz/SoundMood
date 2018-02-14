@@ -40,8 +40,12 @@ document.getElementById('ok').onclick = function() {
   soundEffectAudio.play();
   // after 10 seconds error screen appears
   error = setTimeout(function() {
-    document.getElementById("SlowEndScreen").classList.add("topLayer");
-  }, 10000);
+      setTimeout(function() {
+          document.getElementById('SlowEndScreen').classList.add('topLayer');
+            }, 300);
+    document.getElementById("gallery1").classList.add("bounceOutLeft");
+    document.getElementById("SlowEndScreen").classList.add("zoomIn");
+  }, 11000);
 };
 
 var result = "slow";
@@ -87,8 +91,12 @@ document.getElementById('ok2').onclick = function() {
             document.getElementById("instruction2").classList.add("bounceOutLeft");
   // after 10 seconds error screen appears
   error = setTimeout(function() {
-    document.getElementById("SlowEndScreen").classList.add("topLayer");
-  }, 10000);
+      setTimeout(function() {
+          document.getElementById('SlowEndScreen').classList.add('topLayer');
+            }, 300);
+    document.getElementById("gallery2").classList.add("bounceOutLeft");
+    document.getElementById("SlowEndScreen").classList.add("zoomIn");
+  }, 11000);
 };
 
 new Vue({
@@ -109,17 +117,17 @@ new Vue({
       if (result == "happyhappy" || result == "happyenergetic" || result == "energetichappy" || result == "energeticenergetic") {
               setTimeout(function() {
         document.getElementById("HappyEndScreen").classList.add("topLayer");
-                }, 1000);
+              }, 300);
         console.log(result);
       } else if (result == "sadsad" || result == "sadbored" || result == "boredsad" || result == "boredbored") {
-        setTimeout(function() {
+              setTimeout(function() {
         document.getElementById("SadEndScreen").classList.add("topLayer");
-        }, 1000);
+              }, 300);
         console.log(result);
       } else {
-        setTimeout(function() {
+              setTimeout(function() {
         document.getElementById("SlowEndScreen").classList.add("topLayer");
-        }, 1000);
+              }, 300);
         console.log(result);
       }
     }
@@ -161,5 +169,3 @@ $(document).ready(function() {
     }
   }
 });
-
-//sound effect///
