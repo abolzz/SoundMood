@@ -58,6 +58,10 @@ section {
   font-size: 25px;
   color: white; }
 
+#ready {
+  align-self: center;
+  margin-top: 5%; }
+
 /*end*/
 /*  sceens with instruction */
 .instruction {
