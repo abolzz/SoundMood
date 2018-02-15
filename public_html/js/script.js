@@ -2,6 +2,7 @@
 
 // sound effect for buttons
 var soundEffectAudio = document.getElementById('buttonSound');
+// source of the sound effect
 soundEffectAudio.src = "sounds/click.mp3";
 
 // reload button
@@ -16,9 +17,11 @@ new Vue({
 
 // loading screen dissapears
 document.getElementById('ready').onclick = function() {
+	// after 1 second the loading screen dissappears (thus giving time for animation to be played)
   setTimeout(function() {
   document.getElementById("loadingscreen").classList.add("hidden");
   }, 1000);
+  // sound effect gets played when user clicks on button
   soundEffectAudio.play();
   // animation
   document.getElementById('loadingscreen').classList.add('bounceOutLeft');
@@ -27,36 +30,31 @@ document.getElementById('ready').onclick = function() {
 
 };
 
-// first selection round timer
-$("#ok").click(function() {
-  $('#timer').addClass('timer-quick');
-  $('.timer-quick').startTimer();
-  console.log('timer works');
-});
-
-// second selection round timer
-$("#ok2").click(function() {
-  $('#timer2').addClass('timer-quick');
-  $('.timer-quick').startTimer();
-  console.log('timer works');
-});
-
 // for setting and clearing timeouts
 var error;
 
 document.getElementById('ok').onclick = function() {
+	// timer starts
+	$('#timer').addClass('timer-quick');
+  	$('.timer-quick').startTimer();
+  // 1 second after user has clicked on "OK" button the instruction screen dissappears (thus giving the time for animation)
   setTimeout(function() {
   document.getElementById("instruction1").classList.add("hidden");
   }, 1000);
+  // animation
   document.getElementById('instruction1').classList.add('bounceOutLeft');
+  // sound effect gets played when user clicks on button
   soundEffectAudio.play();
-  // after 10 seconds error screen appears
+  // if user did not click on one of the images then after 11 seconds error screen appears (1 second is for animation)
   error = setTimeout(function() {
+  	  // after 0.3 deconds "SlowEndScreen" (or error screen) appears (by receiving a class which gives it the highest z-index)
       setTimeout(function() {
-          document.getElementById('SlowEndScreen').classList.add('topLayer');
-            }, 300);
+        document.getElementById('SlowEndScreen').classList.add('topLayer');
+      }, 300);
+    // animation
     document.getElementById("gallery1").classList.add("bounceOutLeft");
     document.getElementById("SlowEndScreen").classList.add("zoomIn");
+    // error sound effect gets played
     document.getElementById("errorSound").play();
   }, 11000);
 };
@@ -67,22 +65,23 @@ var result = "slow";
 var firstRound = document.getElementsByClassName('gallery__img');
 console.log(result);
 
-// first round of selections - picture selection
+// new Vue.js app for the first round of selections - picture selection
 new Vue({
   el: '#gallery1',
   methods: {
     firstResult: function() {
-          var value = event.target.getAttribute('data-value');
+    var value = event.target.getAttribute('data-value');
     console.log(value);
+    // result becomes the first pick
     result = value;
     console.log(result);
     soundEffectAudio.play();
-    // because the user clicked on one of the images the timeOut for error screen gets cleared
-    clearTimeout(error);
-     document.getElementById("gallery1").classList.add("bounceOutLeft");
-     setTimeout(function() {
-    document.getElementById("gallery1").classList.add("hidden");
-    }, 1000);
+	    // because the user clicked on one of the images the timeout for error screen gets cleared
+	    clearTimeout(error);
+	     document.getElementById("gallery1").classList.add("bounceOutLeft");
+	     setTimeout(function() {
+	    document.getElementById("gallery1").classList.add("hidden");
+	    }, 1000);
     // makes the gifScreen disappear after 10 seconds
     setTimeout(function() {
       // animation
@@ -100,18 +99,25 @@ new Vue({
 });
 
 document.getElementById('ok2').onclick = function() {
+	// timer starts
+	$('#timer2').addClass('timer-quick');
+  	$('.timer-quick').startTimer();
+  // button sound effect
   soundEffectAudio.play();
-     setTimeout(function() {
+  // 1 second after user has clicked on "OK" button the instruction screen dissappears (thus giving the time for animation)
+  setTimeout(function() {
     document.getElementById("instruction2").classList.add("hidden");
   }, 1000);
             document.getElementById("instruction2").classList.add("bounceOutLeft");
-  // after 10 seconds error screen appears
+  // if user did not click on one of the images then after 11 seconds error screen appears (1 second is for animation)
   error = setTimeout(function() {
+  	  // after 0.3 deconds "SlowEndScreen" (or error screen) appears (by receiving a class which gives it the highest z-index)
       setTimeout(function() {
           document.getElementById('SlowEndScreen').classList.add('topLayer');
-            }, 300);
+      }, 300);
     document.getElementById("gallery2").classList.add("bounceOutLeft");
     document.getElementById("SlowEndScreen").classList.add("zoomIn");
+    // error sound effect gets played
     document.getElementById("errorSound").play();
   }, 11000);
 };
@@ -155,36 +161,28 @@ new Vue({
 
 // play and pause buttons
 var playButtons = document.getElementsByClassName('endScreen__button--play');
-console.log(playButtons);
+
 var pauseButtons = document.getElementsByClassName('endScreen__button--pause');
-var audio = document.getElementsByClassName('songs');
-console.log(audio);
 
 $(document).ready(function() {
   $(document.getElementsByClassName('endScreen__button--pause')).hide();
-  for (var i = 0; i < playButtons.length; i++) {
+    for (var i = 0; i < pauseButtons.length; i++) {
     playButtons[i].onclick = function(event) {
       var value = $(this).attr('data-value');
+      var thisPlayButton = playButtons[value];
+      var audio = thisPlayButton.children[0];
+      console.log(playButtons[value]);
       $(document.getElementsByClassName('endScreen__button--play')).hide();
       $(document.getElementsByClassName('endScreen__button--pause')).show();
-      if (value == 1) {
-        audio[i].play();
-      } else {
-        audio[i + 2].play();
-      }
-    }
-  }
+      audio.play();
 
-  for (var i = 0; i < pauseButtons.length; i++) {
-    pauseButtons[i].onclick = function(event) {
-      var value = $(this).attr('data-value');
-      $(document.getElementsByClassName('endScreen__button--pause')).hide();
-      $(document.getElementsByClassName('endScreen__button--play')).show();
-      if (value == 1) {
-        audio[i].pause();
-      } else {
-        audio[i + 2].pause();
-      }
+		  for (var i = 0; i < pauseButtons.length; i++) {
+		    pauseButtons[i].onclick = function(event) {
+		      $(document.getElementsByClassName('endScreen__button--pause')).hide();
+		      $(document.getElementsByClassName('endScreen__button--play')).show();
+		        audio.pause();
+		    }
+		  }
     }
   }
 });

@@ -1,5 +1,4 @@
-body,
-button {
+body {
   font-family: Occupied, sans-serif;
   font-size: 28px; }
 
@@ -15,10 +14,11 @@ h1 {
 section {
   padding-top: 30px;
   background: linear-gradient(to bottom, #ff004d, #fff24a);
-  width: 100vw;
-  height: 100vh; }
+  width: 100%;
+  height: 100%; }
 
 button {
+  font-family: Occupied, sans-serif;
   align-self: center;
   background-color: transparent;
   border: none;
@@ -63,7 +63,6 @@ button {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100vh;
   background-color: #fff;
   background-image: url("../img/pct5.jpg");
   background-repeat: no-repeat;
@@ -87,10 +86,12 @@ button {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: absolute;
   text-align: center;
-  height: 100vh;
   font-size: 25px; }
+  .instruction__p {
+    width: 95%;
+    padding: 0 2.5%;
+    align-self: center; }
 
 .instruction__button {
   margin-top: 20%;
