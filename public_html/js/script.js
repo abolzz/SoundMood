@@ -101,7 +101,6 @@ new Vue({
 
 document.getElementById('ok2').onclick = function() {
   soundEffectAudio.play();
-   clearTimeout(error);
      setTimeout(function() {
     document.getElementById("instruction2").classList.add("hidden");
   }, 1000);
@@ -122,6 +121,7 @@ new Vue({
   el: '#gallery2',
   methods: {
     showResult: function() {
+    	   clearTimeout(error);
       setTimeout(function() {
     document.getElementById("gallery2").classList.add("hidden");
   }, 1000);
