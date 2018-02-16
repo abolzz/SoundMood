@@ -245,6 +245,18 @@ button {
     grid-column-end: 5;
     justify-self: start;
     align-self: start; }
+  .endScreen #mylist {
+    font-size: 20px;
+    width: 250px;
+    padding: 5px;
+    overflow: scroll;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(255, 242, 74, 0.8);
+    font-family: Occupied, sans-serif;
+    display: none; }
 
 .topLayer {
   z-index: 9; }

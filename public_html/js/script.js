@@ -14,7 +14,7 @@ document.getElementById('reload').onclick = function() {
 document.getElementById('ready').onclick = function() {
 	// after 1 second the loading screen dissappears (thus giving time for animation to be played)
   setTimeout(function() {
-  document.getElementById("loadingscreen").classList.add("hidden");
+    document.getElementById("loadingscreen").classList.add("hidden");
   }, 1000);
   // sound effect gets played when user clicks on button
   soundEffectAudio.play();
@@ -34,7 +34,7 @@ document.getElementById('ok').onclick = function() {
   	$('.timer-quick').startTimer();
   // 1 second after user has clicked on "OK" button the instruction screen dissappears (thus giving the time for animation)
   setTimeout(function() {
-  document.getElementById("instruction1").classList.add("hidden");
+    document.getElementById("instruction1").classList.add("hidden");
   }, 1000);
   // animation
   document.getElementById('instruction1').classList.add('bounceOutLeft');
@@ -122,11 +122,11 @@ new Vue({
   el: '#gallery2',
   methods: {
     showResult: function() {
-    	   clearTimeout(error);
+      clearTimeout(error);
       setTimeout(function() {
-    document.getElementById("gallery2").classList.add("hidden");
-  }, 1000);
-            document.getElementById("gallery2").classList.add("bounceOutLeft");
+        document.getElementById("gallery2").classList.add("hidden");
+      }, 1000);
+      document.getElementById("gallery2").classList.add("bounceOutLeft");
       var value = event.target.getAttribute('data-value');
       console.log(value);
       // combination of both selections (concatinated)
@@ -135,19 +135,19 @@ new Vue({
       soundEffectAudio.play();
       // result calculation
       if (result == "happyhappy" || result == "happyenergetic" || result == "energetichappy" || result == "energeticenergetic") {
-              setTimeout(function() {
-        document.getElementById("HappyEndScreen").classList.add("topLayer");
-              }, 300);
+        setTimeout(function() {
+          document.getElementById("HappyEndScreen").classList.add("topLayer");
+        }, 300);
         console.log(result);
       } else if (result == "sadsad" || result == "sadbored" || result == "boredsad" || result == "boredbored") {
-              setTimeout(function() {
-        document.getElementById("SadEndScreen").classList.add("topLayer");
-              }, 300);
+        setTimeout(function() {
+          document.getElementById("SadEndScreen").classList.add("topLayer");
+        }, 300);
         console.log(result);
       } else {
-              setTimeout(function() {
-        document.getElementById("SlowEndScreen").classList.add("topLayer");
-              }, 300);
+        setTimeout(function() {
+          document.getElementById("SlowEndScreen").classList.add("topLayer");
+        }, 300);
         console.log(result);
       }
     }
@@ -181,3 +181,25 @@ $(document).ready(function() {
     }
   }
 });
+
+//similar songs
+document.getElementById('moreSongs').onclick = function initAudio(event) {
+  document.getElementById('mylist').style.display = 'block';
+  var audio, dir, ext, mylist;
+  dir = "audio/";
+  ext = ".mp3";
+  // Audio Object
+  audio = new Audio();
+  audio.src = dir + "Iwillbehere" + ext;
+  audio.play();
+  // Event Handling
+  mylist = document.getElementById("mylist");
+  mylist.addEventListener("change", changeTrack);
+  // Functions
+  function changeTrack(event) {
+    audio.src = dir + event.target.value + ext;
+    audio.play();
+  }
+}
+//window.addEventListener("load", initAudio);
+document.getElementById('moreSongs').addEventListener("click", initAudio);
