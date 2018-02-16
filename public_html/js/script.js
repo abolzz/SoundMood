@@ -17,7 +17,7 @@ new Vue({
 // loading screen dissapears
 document.getElementById('ready').onclick = function() {
   setTimeout(function() {
-  document.getElementById("loadingscreen").classList.add("hidden");
+    document.getElementById("loadingscreen").classList.add("hidden");
   }, 1000);
   soundEffectAudio.play();
   // animation
@@ -46,15 +46,15 @@ var error;
 
 document.getElementById('ok').onclick = function() {
   setTimeout(function() {
-  document.getElementById("instruction1").classList.add("hidden");
+    document.getElementById("instruction1").classList.add("hidden");
   }, 1000);
   document.getElementById('instruction1').classList.add('bounceOutLeft');
   soundEffectAudio.play();
   // after 10 seconds error screen appears
   error = setTimeout(function() {
-      setTimeout(function() {
-          document.getElementById('SlowEndScreen').classList.add('topLayer');
-            }, 300);
+    setTimeout(function() {
+      document.getElementById('SlowEndScreen').classList.add('topLayer');
+    }, 300);
     document.getElementById("gallery1").classList.add("bounceOutLeft");
     document.getElementById("SlowEndScreen").classList.add("zoomIn");
     document.getElementById("errorSound").play();
@@ -72,44 +72,44 @@ new Vue({
   el: '#gallery1',
   methods: {
     firstResult: function() {
-          var value = event.target.getAttribute('data-value');
-    console.log(value);
-    result = value;
-    console.log(result);
-    soundEffectAudio.play();
-    // because the user clicked on one of the images the timeOut for error screen gets cleared
-    clearTimeout(error);
-     document.getElementById("gallery1").classList.add("bounceOutLeft");
-     setTimeout(function() {
-    document.getElementById("gallery1").classList.add("hidden");
-    }, 1000);
-    // makes the gifScreen disappear after 10 seconds
-    setTimeout(function() {
-      // animation
-      document.getElementById("instructionP2").classList.add("zoomIn");
-      document.getElementById("ok2").classList.add("zoomIn");
-    }, 6000);
-              setTimeout(function() {
-                document.getElementById("gifScreen").classList.add("bounceOutLeft");
-              }, 6000);
-              setTimeout(function() {
-                    document.getElementById("gifScreen").classList.add("hidden");
-              }, 7000);
+      var value = event.target.getAttribute('data-value');
+      console.log(value);
+      result = value;
+      console.log(result);
+      soundEffectAudio.play();
+      // because the user clicked on one of the images the timeOut for error screen gets cleared
+      clearTimeout(error);
+      document.getElementById("gallery1").classList.add("bounceOutLeft");
+      setTimeout(function() {
+        document.getElementById("gallery1").classList.add("hidden");
+      }, 1000);
+      // makes the gifScreen disappear after 10 seconds
+      setTimeout(function() {
+        // animation
+        document.getElementById("instructionP2").classList.add("zoomIn");
+        document.getElementById("ok2").classList.add("zoomIn");
+      }, 6000);
+      setTimeout(function() {
+        document.getElementById("gifScreen").classList.add("bounceOutLeft");
+      }, 6000);
+      setTimeout(function() {
+        document.getElementById("gifScreen").classList.add("hidden");
+      }, 7000);
     }
   }
 });
 
 document.getElementById('ok2').onclick = function() {
   soundEffectAudio.play();
-     setTimeout(function() {
+  setTimeout(function() {
     document.getElementById("instruction2").classList.add("hidden");
   }, 1000);
-            document.getElementById("instruction2").classList.add("bounceOutLeft");
+  document.getElementById("instruction2").classList.add("bounceOutLeft");
   // after 10 seconds error screen appears
   error = setTimeout(function() {
-      setTimeout(function() {
-          document.getElementById('SlowEndScreen').classList.add('topLayer');
-            }, 300);
+    setTimeout(function() {
+      document.getElementById('SlowEndScreen').classList.add('topLayer');
+    }, 300);
     document.getElementById("gallery2").classList.add("bounceOutLeft");
     document.getElementById("SlowEndScreen").classList.add("zoomIn");
     document.getElementById("errorSound").play();
@@ -121,11 +121,11 @@ new Vue({
   el: '#gallery2',
   methods: {
     showResult: function() {
-    	   clearTimeout(error);
+      clearTimeout(error);
       setTimeout(function() {
-    document.getElementById("gallery2").classList.add("hidden");
-  }, 1000);
-            document.getElementById("gallery2").classList.add("bounceOutLeft");
+        document.getElementById("gallery2").classList.add("hidden");
+      }, 1000);
+      document.getElementById("gallery2").classList.add("bounceOutLeft");
       var value = event.target.getAttribute('data-value');
       console.log(value);
       // combination of both selections (concatinated)
@@ -134,19 +134,19 @@ new Vue({
       soundEffectAudio.play();
       // result calculation
       if (result == "happyhappy" || result == "happyenergetic" || result == "energetichappy" || result == "energeticenergetic") {
-              setTimeout(function() {
-        document.getElementById("HappyEndScreen").classList.add("topLayer");
-              }, 300);
+        setTimeout(function() {
+          document.getElementById("HappyEndScreen").classList.add("topLayer");
+        }, 300);
         console.log(result);
       } else if (result == "sadsad" || result == "sadbored" || result == "boredsad" || result == "boredbored") {
-              setTimeout(function() {
-        document.getElementById("SadEndScreen").classList.add("topLayer");
-              }, 300);
+        setTimeout(function() {
+          document.getElementById("SadEndScreen").classList.add("topLayer");
+        }, 300);
         console.log(result);
       } else {
-              setTimeout(function() {
-        document.getElementById("SlowEndScreen").classList.add("topLayer");
-              }, 300);
+        setTimeout(function() {
+          document.getElementById("SlowEndScreen").classList.add("topLayer");
+        }, 300);
         console.log(result);
       }
     }
@@ -188,3 +188,25 @@ $(document).ready(function() {
     }
   }
 });
+
+//similar songs
+document.getElementById('moreSongs').onclick = function initAudio(event) {
+  document.getElementById('mylist').style.display = 'block';
+  var audio, dir, ext, mylist;
+  dir = "audio/";
+  ext = ".mp3";
+  // Audio Object
+  audio = new Audio();
+  audio.src = dir + "Iwillbehere" + ext;
+  audio.play();
+  // Event Handling
+  mylist = document.getElementById("mylist");
+  mylist.addEventListener("change", changeTrack);
+  // Functions
+  function changeTrack(event) {
+    audio.src = dir + event.target.value + ext;
+    audio.play();
+  }
+}
+//window.addEventListener("load", initAudio);
+document.getElementById('moreSongs').addEventListener("click", initAudio);
