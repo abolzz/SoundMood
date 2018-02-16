@@ -133,12 +133,22 @@ new Vue({
       console.log(result);
       soundEffectAudio.play();
       // result calculation
-      if (result == "happyhappy" || result == "happyenergetic" || result == "energetichappy" || result == "energeticenergetic") {
+      if (result == "happyhappy" || result == "happyenergetic" || result == "energetichappy") {
               setTimeout(function() {
         document.getElementById("HappyEndScreen").classList.add("topLayer");
               }, 300);
         console.log(result);
-      } else if (result == "sadsad" || result == "sadbored" || result == "boredsad" || result == "boredbored") {
+      } else if (result == "boredsad" || result == "boredbored" ) {
+              setTimeout(function() {
+        document.getElementById("DepressedEndScreen").classList.add("topLayer");
+              }, 300);
+        console.log(result);
+      }else if (result == "happysad" || result == "sadhappy" || result == "sadenergetic" || result == "energeticsad") {
+              setTimeout(function() {
+        document.getElementById("TiredEndScreen").classList.add("topLayer");
+              }, 300);
+        console.log(result);
+      } else if (result == "sadsad" || result == "sadbored" ) {
               setTimeout(function() {
         document.getElementById("SadEndScreen").classList.add("topLayer");
               }, 300);
