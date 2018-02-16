@@ -1,8 +1,9 @@
 .gifScreen {
 	height: 100vh;
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 	.gifScreen__gif {
 		grid-column-start: 1;
 		align-self: center;
