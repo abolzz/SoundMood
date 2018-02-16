@@ -6,14 +6,9 @@ var soundEffectAudio = document.getElementById('buttonSound');
 soundEffectAudio.src = "sounds/click.mp3";
 
 // reload button
-new Vue({
-  el: '#reload',
-  methods: {
-    reloadApp: function() {
+document.getElementById('reload').onclick = function() {
       location.reload();
     }
-  }
-});
 
 // loading screen dissapears
 document.getElementById('ready').onclick = function() {

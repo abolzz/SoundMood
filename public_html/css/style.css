@@ -41,19 +41,9 @@ button {
   left: 0;
   width: 100%; }
   .header h1 {
-    width: 60%;
-    display: inline-block;
+    width: 100%;
     text-align: center;
     align-self: center; }
-  .header button {
-    width: 20%;
-    align-self: center;
-    display: flex;
-    justify-content: center; }
-  .header img {
-    align-self: center; }
-  .header div {
-    width: 20%; }
 
 /*css rules for loading page start */
 .loader {
