@@ -182,6 +182,75 @@
 
   </section>
 
+
+  <!-- tired result end screen (error) -->
+  <section id="TiredEndScreen" class="endScreen noscroll">
+
+    <h1 class="endScreen__h1">You seem to be tired today...</h1>
+    <img src="img/tired.png" alt="Emoticon" class="endScreen__img">
+    <p class="endScreen__p endScreen__p--end">Try listening to this:</p>
+
+    <!-- error sound -->
+    <audio id="errorSound" src="sounds/error-sound.mp3"></audio>
+
+    <!-- resulting song -->
+    <!-- play button -->
+    <button class="endScreen__button endScreen__button--play" data-value=0>
+  <audio class="songs" src="songs/AlanWalkerftGavinJames-Tired.mp3"></audio>
+  <img src="img/play-button.svg" alt="Play Button">
+</button>
+    <!-- pause button -->
+    <button class="endScreen__button endScreen__button--pause" data-value=0>
+  <audio class="songs" src="songs/AlanWalkerftGavinJames-Tired.mp3"></audio>
+  <img src="img/pause-button.svg" alt="Pause Button">
+</button>
+    <!-- song name and artist -->
+    <p class="endScreen__p endScreen__p--right endScreen__p--end endScreen__p--bold">Tired</p>
+    <p class="endScreen__p endScreen__p--right endScreen__p--start">Alan Walker ft Gavin James</p>
+
+    <!-- other similar songs -->
+    <p class="endScreen__p endScreen__p--left">Similar songs:</p>
+    <button class="endScreen__button endScreen__button--more">
+  <img src="img/more-button.svg" alt="More Button">
+</button>
+
+  </section>
+
+
+  <!-- depressed result end screen (error) -->
+  <section id="DepressedEndScreen" class="endScreen noscroll">
+
+    <h1 class="endScreen__h1">You seem to be depressed today...</h1>
+    <img src="img/depressed.png" alt="Emoticon" class="endScreen__img">
+    <p class="endScreen__p endScreen__p--end">Try listening to this:</p>
+
+    <!-- error sound -->
+    <audio id="errorSound" src="sounds/error-sound.mp3"></audio>
+
+    <!-- resulting song -->
+    <!-- play button -->
+    <button class="endScreen__button endScreen__button--play" data-value=0>
+  <audio class="songs" src="songs/Sam Smith - Too Good At Goodbyes Official Video.mp3"></audio>
+  <img src="img/play-button.svg" alt="Play Button">
+</button>
+    <!-- pause button -->
+    <button class="endScreen__button endScreen__button--pause" data-value=0>
+  <audio class="songs" src="songs/SamSmith-TooGoodAtGoodbyes.mp3"></audio>
+  <img src="img/pause-button.svg" alt="Pause Button">
+</button>
+    <!-- song name and artist -->
+    <p class="endScreen__p endScreen__p--right endScreen__p--end endScreen__p--bold">Too Good At Goodbyes</p>
+    <p class="endScreen__p endScreen__p--right endScreen__p--start">Sam Smith</p>
+
+    <!-- other similar songs -->
+    <p class="endScreen__p endScreen__p--left">Similar songs:</p>
+    <button class="endScreen__button endScreen__button--more">
+  <img src="img/more-button.svg" alt="More Button">
+</button>
+
+  </section>
+
+
   <!-- Vue.js -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
   <!-- jQuery -->
