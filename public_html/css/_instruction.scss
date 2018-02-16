@@ -4,14 +4,15 @@
 		display:flex;
 		justify-content:center;
 		flex-direction:column;
-		position: absolute;
 		text-align:center;
-		height:100vh;
 		font-size:25px;
-
-
+	
+	&__p {
+		width: 95%;
+		padding: 0 2.5%;
+		align-self: center;
 	}
-
+	}
 
 	.instruction__button {
 		margin-top:20%;
@@ -21,18 +22,19 @@
 	    text-align: center;
 	    text-decoration: none;
 	    font-size: 16px;
-
 	}
 
-	.noscroll {
+.noscroll {
   position: fixed;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
-#instruction1{
+#instruction1 {
 	z-index:8;
 	/*end*/
 }
-#instruction2{
+
+#instruction2 {
 	z-index:5;
 	/*end*/
 }

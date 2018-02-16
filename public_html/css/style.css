@@ -1,5 +1,4 @@
-body,
-button {
+body {
   font-family: Occupied, sans-serif;
   font-size: 28px; }
 
@@ -15,10 +14,11 @@ h1 {
 section {
   padding-top: 30px;
   background: linear-gradient(to bottom, #ff004d, #fff24a);
-  width: 100vw;
-  height: 100vh; }
+  width: 100%;
+  height: 100%; }
 
 button {
+  font-family: Occupied, sans-serif;
   align-self: center;
   background-color: transparent;
   border: none;
@@ -41,19 +41,9 @@ button {
   left: 0;
   width: 100%; }
   .header h1 {
-    width: 60%;
-    display: inline-block;
+    width: 100%;
     text-align: center;
     align-self: center; }
-  .header button {
-    width: 20%;
-    align-self: center;
-    display: flex;
-    justify-content: center; }
-  .header img {
-    align-self: center; }
-  .header div {
-    width: 20%; }
 
 /*css rules for loading page start */
 .loader {
@@ -63,7 +53,6 @@ button {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100vh;
   background-color: #fff;
   background-image: url("../img/pct5.jpg");
   background-repeat: no-repeat;
@@ -87,10 +76,12 @@ button {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: absolute;
   text-align: center;
-  height: 100vh;
   font-size: 25px; }
+  .instruction__p {
+    width: 95%;
+    padding: 0 2.5%;
+    align-self: center; }
 
 .instruction__button {
   margin-top: 20%;
@@ -254,6 +245,18 @@ button {
     grid-column-end: 5;
     justify-self: start;
     align-self: start; }
+  .endScreen #mylist {
+    font-size: 20px;
+    width: 250px;
+    padding: 5px;
+    overflow: scroll;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(255, 242, 74, 0.8);
+    font-family: Occupied, sans-serif;
+    display: none; }
 
 .topLayer {
   z-index: 9; }

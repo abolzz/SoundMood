@@ -17,13 +17,7 @@
 
   <!-- header -->
   <header class="header">
-    <div></div>
-    <h1 class="header__h1">SoundMood</h1>
-    <!-- reload button -->
-    <button id="reload" v-on:click="reloadApp">
-      <img src="img/reload-button.png" alt="Reload Button">
-    </button>
-
+    <h1 id="reload" class="header__h1">SoundMood</h1>
   </header>
 
   <!--loading screen-->
@@ -35,7 +29,7 @@
     <button id="ready" class="instruction__button animated zoomIn">Ready</button>
 
   </section>
-<!--ajsfnwjegfjegnwjengjwng-->
+
   <!--first screen with instruction-->
   <section id="instruction1" class="instruction noscroll animated">
 
@@ -68,7 +62,7 @@
   <!--second screen instruction-->
   <section id="instruction2" class="instruction noscroll animated">
 
-    <p id="instructionP2" class="instruction__p animated animated">Choose the emoticon which <br>suits your current mood.</p>
+    <p id="instructionP2" class="instruction__p animated animated">Choose the emoticon which <br>represents how you feel after seeing the GIF the most.</p>
     <button id="ok2" class="instruction__button animated">OK</button>
 
   </section>
@@ -106,7 +100,6 @@
 </button>
     <!-- pause button -->
     <button class="endScreen__button endScreen__button--pause" data-value=0>
-  <audio class="songs" src="songs/BrunoMars-TheLazySong.mp3"></audio>
   <img src="img/pause-button.svg" alt="Pause Button">
 </button>
     <!-- song name and artist -->
@@ -134,11 +127,12 @@
   <audio class="songs" src="songs/NIN-EveryDayIsExactlyTheSame.mp3"></audio>
   <img src="img/play-button.svg" alt="Play Button">
 </button>
-<!-- pause button -->
+
+    <!-- pause button -->
     <button class="endScreen__button endScreen__button--pause" data-value=1>
-  <audio class="songs" src="songs/NIN-EveryDayIsExactlyTheSame.mp3"></audio>
   <img src="img/pause-button.svg" alt="Pause Button">
 </button>
+
     <!-- song name and artist -->
     <p class="endScreen__p endScreen__p--right endScreen__p--end endScreen__p--bold">Every Day is Exactly the Same</p>
     <p class="endScreen__p endScreen__p--right endScreen__p--start">Nine Inch Nails</p>
@@ -166,7 +160,6 @@
 </button>
     <!-- pause button -->
     <button class="endScreen__button endScreen__button--pause" data-value=2>
-  <audio class="songs" src="songs/PharrellWilliams-Happy.mp3"></audio>
   <img src="img/pause-button.svg" alt="Play Button">
 </button>
     <!-- song name and artist -->
@@ -175,9 +168,17 @@
 
     <!-- other similar songs -->
     <p class="endScreen__p endScreen__p--left">Similar songs:</p>
-    <button class="endScreen__button endScreen__button--more">
+
+    <button id="moreSongs" class="endScreen__button endScreen__button--more">
   <img src="img/more-button.svg" alt="More Button">
 </button>
+    <!--adding extra songs-->
+    <select id="mylist" size="4" class="similarSongs">
+  <option value="Iwillbehere">Jam On It</option>
+  <option value="healtheword">Stoker</option>
+  <option value="thriller">Skull Fire</option>
+  <option value="rockmyworld">Scurvy Pirate</option>
+</select>
 
   </section>
 
