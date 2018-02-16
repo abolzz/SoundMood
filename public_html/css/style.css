@@ -1,5 +1,4 @@
-body,
-button {
+body {
   font-family: Occupied, sans-serif;
   font-size: 28px; }
 
@@ -15,10 +14,12 @@ h1 {
 section {
   padding-top: 30px;
   background: linear-gradient(to bottom, #ff004d, #fff24a);
-  width: 100vw;
-  height: 100vh; }
+  width: 100%;
+  height: 100%; }
 
 button {
+  font-family: Occupied, sans-serif;
+  align-self: center;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -40,19 +41,9 @@ button {
   left: 0;
   width: 100%; }
   .header h1 {
-    width: 60%;
-    display: inline-block;
+    width: 100%;
     text-align: center;
     align-self: center; }
-  .header button {
-    width: 20%;
-    align-self: center;
-    display: flex;
-    justify-content: center; }
-  .header img {
-    align-self: center; }
-  .header div {
-    width: 20%; }
 
 /*css rules for loading page start */
 .loader {
@@ -62,7 +53,6 @@ button {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100vh;
   background-color: #fff;
   background-image: url("../img/pct5.jpg");
   background-repeat: no-repeat;
@@ -78,19 +68,20 @@ button {
   color: white; }
 
 #ready {
-  align-self: center;
   margin-top: 5%; }
 
 /*end*/
 /*  sceens with instruction */
 .instruction {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
-  height: 100vh;
   font-size: 25px; }
-
-.instruction__p {
-  padding-top: 80%; }
+  .instruction__p {
+    width: 95%;
+    padding: 0 2.5%;
+    align-self: center; }
 
 .instruction__button {
   margin-top: 20%;
