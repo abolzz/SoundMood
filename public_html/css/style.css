@@ -15,6 +15,7 @@ section {
   padding-top: 30px;
   background: linear-gradient(to bottom, #ff004d, #fff24a);
   width: 100%;
+  max-width: 400px;
   height: 100%; }
 
 button {
@@ -39,7 +40,8 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  max-width: 400px; }
   .header h1 {
     width: 100%;
     text-align: center;
